@@ -1360,7 +1360,14 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "un couteau",
         "english": "a knife"
+    },
+    {
+        "french": "faire du rangement",
+        "english": "to tidy up / to clean up"
+    },
+    {
+        "french": "retrouver des amis et boire un verre",
+        "english": "to meet friends and have a drink"
     }
-    
     
 ];
