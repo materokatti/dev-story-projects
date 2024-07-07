@@ -1,8 +1,10 @@
+"use client";
+
 import PongGame from "../../components/PongGame/PongGame";
 
 const PongPage: React.FC = () => {
   return (
-    <div>
+    <div style={{width: "100vw", height: "100vh"}}>
       <PongGame />
     </div>
   );

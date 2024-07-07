@@ -7,13 +7,27 @@ const PongGame: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current!;
+    const canvas = canvasRef.current;
     if (!canvas) return;
     const context = canvas.getContext("2d");
     if (!context) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const handleFullScreenChange = () => {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        window.location.reload();
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullScreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullScreenChange);
 
     const paddleWidth = 10;
     const paddleHeight = 100;
@@ -33,16 +47,16 @@ const PongGame: React.FC = () => {
       height: number,
       color: string
     ) {
-      context!.fillStyle = color;
-      context!.fillRect(x, y, width, height);
+      context.fillStyle = color;
+      context.fillRect(x, y, width, height);
     }
 
     function drawCircle(x: number, y: number, radius: number, color: string) {
-      context!.fillStyle = color;
-      context!.beginPath();
-      context!.arc(x, y, radius, 0, Math.PI * 2, false);
-      context!.closePath();
-      context!.fill();
+      context.fillStyle = color;
+      context.beginPath();
+      context.arc(x, y, radius, 0, Math.PI * 2, false);
+      context.closePath();
+      context.fill();
     }
 
     function drawNet() {
@@ -100,7 +114,7 @@ const PongGame: React.FC = () => {
     }
 
     function render() {
-      context!.clearRect(0, 0, canvas.width, canvas.height);
+      context.clearRect(0, 0, canvas.width, canvas.height);
       drawNet();
       drawRect(0, playerY, paddleWidth, paddleHeight, "#fff");
       drawRect(
@@ -120,6 +134,15 @@ const PongGame: React.FC = () => {
     }
 
     gameLoop();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+      document.removeEventListener("fullscreenchange", handleFullScreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullScreenChange
+      );
+    };
   }, []);
 
   return <canvas ref={canvasRef} className={styles.canvas}></canvas>;
