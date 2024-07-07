@@ -12,8 +12,8 @@ const PongGame: React.FC = () => {
     const context = canvas.getContext("2d");
     if (!context) return;
 
-    canvas.width = 800;
-    canvas.height = 600;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const paddleWidth = 10;
     const paddleHeight = 100;
