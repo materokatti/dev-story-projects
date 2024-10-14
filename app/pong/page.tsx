@@ -1,6 +1,6 @@
 "use client";
 
-import PongGame from "../../components/PongGame/PongGame";
+import PongGame from "./PongGame";
 
 const PongPage: React.FC = () => {
   return (
