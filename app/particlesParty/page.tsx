@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-const ThePoorThingsPage: React.FC = () => {
+const ParticlesPartyPage: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
@@ -87,4 +87,4 @@ const ThePoorThingsPage: React.FC = () => {
     );
   };
 
-export default ThePoorThingsPage;
+export default ParticlesPartyPage;
