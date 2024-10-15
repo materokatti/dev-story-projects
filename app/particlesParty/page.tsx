@@ -8,6 +8,15 @@ const ParticlesPartyPage: React.FC = () => {
     useEffect(() => {
       const canvas = canvasRef.current;
       if (canvas) {
+        const updateCanvasSize = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+      };
+
+      window.addEventListener('resize', updateCanvasSize);
+
+      updateCanvasSize();
+      
         const ctx = canvas.getContext("2d");
         const particles: { x: number; y: number; vx: number; vy: number }[] = [];
         const particleCount = 100;
@@ -68,6 +77,9 @@ const ParticlesPartyPage: React.FC = () => {
           createParticles();
           animate();
         }
+        return () => {
+          window.removeEventListener('resize', updateCanvasSize);
+        }
       }
     }, []);
   
@@ -82,7 +94,7 @@ const ParticlesPartyPage: React.FC = () => {
           background: "black",
         }}
       >
-        <canvas ref={canvasRef} width={800} height={600} />
+        <canvas ref={canvasRef} />
       </div>
     );
   };
