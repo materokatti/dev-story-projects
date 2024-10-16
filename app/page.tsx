@@ -7,7 +7,7 @@ export default function Home() {
     <div className="absolute -z-10 ">
         <ParticlesPartyPage />
       </div>
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-white">
       
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         
@@ -19,7 +19,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By 
-            <span className="text-lg font-semibold bg-[#F8C44C] px-3 rou nded-md">DevStory</span>
+            <span className="text-lg font-semibold bg-[#F8C44C] px-3 rou nded-md text-black">DevStory</span>
           </a>
         </div>
       </div>

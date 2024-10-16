@@ -43,7 +43,7 @@ const ParticlesPartyPage: React.FC = () => {
   
             ctx!.beginPath();
             ctx!.arc(particle.x, particle.y, 1.5, 0, Math.PI * 2);
-            ctx!.fillStyle = "white";
+            ctx!.fillStyle = "#F8C44C";
             ctx!.fill();
   
             if (
