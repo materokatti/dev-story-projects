@@ -19,7 +19,7 @@ const ParticlesPartyPage: React.FC = () => {
       
         const ctx = canvas.getContext("2d");
         const particles: { x: number; y: number; vx: number; vy: number }[] = [];
-        const particleCount = 10000;
+        const particleCount = 700;
   
         const createParticles = () => {
           for (let i = 0; i < particleCount; i++) {
@@ -42,7 +42,7 @@ const ParticlesPartyPage: React.FC = () => {
             particle.y += particle.vy;
   
             ctx!.beginPath();
-            ctx!.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+            ctx!.arc(particle.x, particle.y, 1.5, 0, Math.PI * 2);
             ctx!.fillStyle = "white";
             ctx!.fill();
   
