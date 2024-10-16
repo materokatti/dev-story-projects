@@ -19,13 +19,12 @@ const ParticlesPartyPage: React.FC = () => {
       
         const ctx = canvas.getContext("2d");
         const particles: { x: number; y: number; vx: number; vy: number }[] = [];
-        const particleCount = 100;
+        const particleCount = 10000;
   
-        // Function to create particles
         const createParticles = () => {
           for (let i = 0; i < particleCount; i++) {
-            const angle = Math.random() * Math.PI * 2; // Random angle in radians
-            const speed = Math.random() * 2 + 1; // Random speed
+            const angle = Math.random() * Math.PI * 2;
+            const speed = Math.random() * 2 + 1;
             particles.push({
               x: canvas.width / 2,
               y: canvas.height / 2,
@@ -35,7 +34,6 @@ const ParticlesPartyPage: React.FC = () => {
           }
         };
   
-        // Function to update particle positions
         const updateParticles = () => {
           ctx?.clearRect(0, 0, canvas.width, canvas.height);
   
@@ -43,13 +41,11 @@ const ParticlesPartyPage: React.FC = () => {
             particle.x += particle.vx;
             particle.y += particle.vy;
   
-            // Draw the particle
             ctx!.beginPath();
             ctx!.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
             ctx!.fillStyle = "white";
             ctx!.fill();
   
-            // If particle goes off the screen, reset it to the center
             if (
               particle.x < 0 ||
               particle.x > canvas.width ||
@@ -65,14 +61,11 @@ const ParticlesPartyPage: React.FC = () => {
             }
           });
         };
-  
-        // Animation loop
         const animate = () => {
           updateParticles();
           requestAnimationFrame(animate);
         };
   
-        // Initialize
         if (ctx) {
           createParticles();
           animate();
