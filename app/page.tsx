@@ -6,10 +6,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
     <>
-    <div className="absolute -z-10 ">
-        <ParticlesPartyPage />
-      </div>
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-white">
+    <main className="flex min-h-screen flex-col text-white">
       <Hero />
       <Projects />
     </main>
