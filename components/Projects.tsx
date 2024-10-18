@@ -1,6 +1,11 @@
-const Projects = () => {
-    return (
-    <div className="mb-32 grid gap-5 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left ">
+import React, { forwardRef } from 'react';
+
+const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+  return (
+    <div
+      ref={ref}
+      className="h-screen w-full p-24 mb-32 grid gap-4 text-center lg:mb-0 lg:w-full lg:grid-cols-4 lg:text-left"
+    >
         <a
           href="/pong"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700"
@@ -32,7 +37,7 @@ const Projects = () => {
           </p>
         </a>
       </div>
-    );
-}
-
+  );
+});
+Projects.displayName = 'Projects';
 export default Projects;
