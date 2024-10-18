@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="h-screen relative flex flex-col items-center justify-between">
+    <div className="h-screen relative flex flex-col items-center justify-between text-white">
         <div className="absolute -z-10 ">
             <ParticlesPartyPage />
         </div>
