@@ -4,7 +4,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-screen w-full p-24 mb-32 grid gap-4 text-center lg:mb-0 lg:w-full lg:grid-cols-4 lg:text-left"
+      className="h-screen w-full p-24 mb-32 grid gap-4 items-center text-center lg:mb-0 lg:w-full lg:grid-cols-4 lg:text-left"
     >
         <a
           href="/pong"
