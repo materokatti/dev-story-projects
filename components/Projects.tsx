@@ -1,11 +1,42 @@
-import React, { forwardRef } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+  const Projects = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+            }
+          });
+        },
+        { threshold: 0.7 }
+      );
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+      return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+      console.log("isVisible:", isVisible);
+    }, [isVisible]);
+  
   return (
-    <div className='h-screen w-full p-24 mb-32 lg:mb-0 lg:w-full'>
+    <div   
+        className={`h-screen w-full p-24 mb-32 lg:mb-0 lg:w-full`}
+        style={{
+          transition: 'opacity 1s ease-out, transform 1s ease-out',
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'translateY(0)' : 'translateY(80px)',
+        }}
+        ref={ref}
+      >
       <h1 className="text-3xl font-semibold text-center mb-10">Projects</h1>
       <div
-        ref={ref}
         className="grid gap-4 text-center lg:grid-cols-4 lg:text-left"
       >
           <a
@@ -41,6 +72,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
       </div>
   );
-});
-Projects.displayName = 'Projects';
+};
+
 export default Projects;
