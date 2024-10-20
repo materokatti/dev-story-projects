@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div className='h-screen w-full p-24 mb-32 lg:mb-0 lg:w-full'>
-      <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
+      <h1 className="text-3xl font-semibold text-center mb-10">Projects</h1>
       <div
         ref={ref}
         className="grid gap-4 text-center lg:grid-cols-4 lg:text-left"
