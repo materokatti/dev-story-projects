@@ -21,22 +21,6 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  // const consoleStyle3 = `
-  //   font-size: 50px;
-  //   font-weight: 900;
-  //   color: transparent;
-  //   background-image: url('https://i.imgur.com/5VQI2Ve.png');
-  //   background-size: cover;
-  //   text-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
-  //   padding: 50px;
-  //   border: 10px double pink;
-  //   transform: rotate(45deg);
-  //   letter-spacing: 10px;
-  //   text-transform: uppercase;
-  // `;
-
-  // console.log("%c Critical Error! 😂🤯", consoleStyle3);
-
   return (
     <div
       className={`h-screen w-full p-24 mb-32 lg:mb-0 lg:w-full`}
