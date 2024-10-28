@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const CircleAreaPage: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const [segments, setSegments] = useState<number>(10); // 초기 조각 개수
+    const [segments, setSegments] = useState<number>(4); // 초기 조각 개수
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -20,34 +20,49 @@ const CircleAreaPage: React.FC = () => {
                 context.fillStyle = "black";
                 context.fillRect(0, 0, canvas.width, canvas.height);
 
-                // 원의 중심과 반지름 설정
-                const x = canvas.width / 2;
+                // 왼쪽 전체 원 설정
+                const leftX = canvas.width * 0.25; // 왼쪽에 위치하도록 설정
                 const y = canvas.height / 2;
                 const radius = 200;
 
                 // 각 조각의 중심각 계산
                 const angleStep = (2 * Math.PI) / segments;
 
-                // 조각 그리기
+                // 왼쪽 원의 전체 조각 그리기
                 for (let i = 0; i < segments; i++) {
                     const startAngle = i * angleStep;
                     const endAngle = startAngle + angleStep;
 
                     context.beginPath();
-                    context.moveTo(x, y); // 원의 중심에서 시작
-                    context.arc(x, y, radius, startAngle, endAngle); // 각 조각 그리기
+                    context.moveTo(leftX, y);
+                    context.arc(leftX, y, radius, startAngle, endAngle);
                     context.closePath();
 
-                    // 조각 색상 설정
                     context.fillStyle = "white";
                     context.fill();
 
-                    // 구분선 색상 설정 및 그리기
                     context.strokeStyle = "black";
                     context.lineWidth = 2;
                     context.stroke();
                 }
 
+                // 오른쪽에 부채꼴 조각 하나만 그리기
+                const rightX = canvas.width * 0.75; // 오른쪽에 위치하도록 설정
+                const centralAngle = 3 * Math.PI / 2; // 항상 아래를 향하도록 설정
+                const startAngle = centralAngle - angleStep / 2;
+                const endAngle = centralAngle + angleStep / 2;
+
+                context.beginPath();
+                context.moveTo(rightX, y);
+                context.arc(rightX, y, radius, startAngle, endAngle);
+                context.closePath();
+
+                context.fillStyle = "white";
+                context.fill();
+
+                context.strokeStyle = "black";
+                context.lineWidth = 2;
+                context.stroke();
             }
         }
     }, [segments]); // 조각 개수가 변경될 때마다 원을 다시 그림
