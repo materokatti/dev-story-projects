@@ -25,10 +25,8 @@ const CircleAreaPage: React.FC = () => {
                 const y = canvas.height / 2;
                 const radius = 200;
 
-                // 각 조각의 중심각 계산
-                const angleStep = (2 * Math.PI) / segments;
-
                 // 왼쪽 원의 전체 조각 그리기
+                const angleStep = (2 * Math.PI) / segments;
                 for (let i = 0; i < segments; i++) {
                     const startAngle = i * angleStep;
                     const endAngle = startAngle + angleStep;
@@ -46,23 +44,32 @@ const CircleAreaPage: React.FC = () => {
                     context.stroke();
                 }
 
-                // 오른쪽에 부채꼴 조각 하나만 그리기
-                const rightX = canvas.width * 0.75; // 오른쪽에 위치하도록 설정
-                const centralAngle = 3 * Math.PI / 2; // 항상 아래를 향하도록 설정
-                const startAngle = centralAngle - angleStep / 2;
-                const endAngle = centralAngle + angleStep / 2;
+                // 오른쪽에 부채꼴 조각들 그리기
+                const baseX = canvas.width * 0.6; // 첫 부채꼴의 시작 위치 설정
+                const xOffset = 1.5 * radius; // 각 부채꼴의 x 간격 설정
+                const yOffset = radius; // 홀수/짝수에 따른 y 간격 설정
 
-                context.beginPath();
-                context.moveTo(rightX, y);
-                context.arc(rightX, y, radius, startAngle, endAngle);
-                context.closePath();
+                for (let i = 0; i < segments; i++) {
+                    // 홀수 부채꼴은 상단(3 * Math.PI / 2), 짝수 부채꼴은 하단(Math.PI / 2)
+                    const centralAngle = i % 2 === 0 ? 3 * Math.PI / 2 : Math.PI / 2;
+                    const startAngle = centralAngle - angleStep / 2;
+                    const endAngle = centralAngle + angleStep / 2;
 
-                context.fillStyle = "white";
-                context.fill();
+                    const currentX = baseX + i * xOffset; // 각 부채꼴의 x 위치 조정
+                    const currentY = i % 2 !== 0 ? y - 0.35 * yOffset : y + 0.35 * yOffset; // 짝수는 위로, 홀수는 아래로 이동
 
-                context.strokeStyle = "black";
-                context.lineWidth = 2;
-                context.stroke();
+                    context.beginPath();
+                    context.moveTo(currentX, currentY);
+                    context.arc(currentX, currentY, radius, startAngle, endAngle);
+                    context.closePath();
+
+                    context.fillStyle = "white";
+                    context.fill();
+
+                    context.strokeStyle = "black";
+                    context.lineWidth = 2;
+                    context.stroke();
+                }
             }
         }
     }, [segments]); // 조각 개수가 변경될 때마다 원을 다시 그림
