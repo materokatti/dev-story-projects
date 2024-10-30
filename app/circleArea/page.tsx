@@ -48,7 +48,19 @@ const CircleAreaPage: React.FC = () => {
                 const baseX = canvas.width * 0.5; // 첫 부채꼴의 시작 위치 설정
                 const yOffset = radius; // 홀수/짝수에 따른 y 간격 설정
                 const xOffset = radius * Math.sin(angleStep / 2); // 부채꼴 사이의 거리를 계산
-                const curruentYModifier = segments < 10 ? 0.4 : 0.5;
+                const MODIFIER_MAP: Record<number, number> = {
+                    2: 0.0000000000001,
+                    3: 0.25,
+                    4: 0.35,
+                    5: 0.41,
+                    6: 0.43,
+                    7: 0.45,
+                    8: 0.47,
+                    9: 0.48,
+                    10: 0.49,
+                };
+                const currentYModifier = MODIFIER_MAP[segments] || 0.5;
+
 
                 for (let i = 0; i < segments; i++) {
                     const centralAngle = i % 2 === 0 ? 3 * Math.PI / 2 : Math.PI / 2;
@@ -56,7 +68,7 @@ const CircleAreaPage: React.FC = () => {
                     const endAngle = centralAngle + angleStep / 2;
 
                     const currentX = baseX + i * xOffset; // 계산된 xOffset 사용
-                    const currentY = i % 2 !== 0 ? y - curruentYModifier * yOffset : y + curruentYModifier * yOffset;
+                    const currentY = i % 2 !== 0 ? y - currentYModifier * yOffset : y + currentYModifier * yOffset;
 
                     context.beginPath();
                     context.moveTo(currentX, currentY);
