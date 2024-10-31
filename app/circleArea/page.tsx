@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const CircleAreaPage: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const [segments, setSegments] = useState<number>(12); // 초기 조각 개수
+    const [segments, setSegments] = useState<number>(3); // 초기 조각 개수
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -45,7 +45,7 @@ const CircleAreaPage: React.FC = () => {
                 }
 
                 // 오른쪽에 부채꼴 조각들 그리기
-                const baseX = canvas.width * 0.5; // 첫 부채꼴의 시작 위치 설정
+                const baseX = canvas.width * 0.6; // 첫 부채꼴의 시작 위치 설정
                 const yOffset = radius; // 홀수/짝수에 따른 y 간격 설정
                 const xOffset = radius * Math.sin(angleStep / 2); // 부채꼴 사이의 거리를 계산
                 const MODIFIER_MAP: Record<number, number> = {
