@@ -120,7 +120,7 @@ const CircleAreaPage: React.FC = () => {
                         onClick={toggleStrokeColor}
                         className="bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-lg border-4 border-black"
                     >
-                        Line Color to White
+                        Line Color to {strokeColor === "black" ? "White" : "Black"}
                     </button>
                 </div>
                 <div>
