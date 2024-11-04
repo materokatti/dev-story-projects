@@ -94,23 +94,32 @@ const CircleAreaPage: React.FC = () => {
 
     return (
         <div className="w-screen h-screen flex justify-center items-center bg-black relative">
-            <canvas ref={canvasRef} />
-            <div className="absolute bottom-10 flex gap-4 items-center">
-                <input
-                    type="number"
-                    placeholder="Enter number of segments"
-                    value={segments}
-                    onChange={handleInputChange}
-                    className="px-4 py-2 rounded-lg border-4 border-black focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-                    min="1"
-                />
-                <button
-                    onClick={toggleStrokeColor}
-                    className="bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-lg border-4 border-black"
-                >
-                    Toggle Line Color
-                </button>
+            <div className="absolute top-10 flex items-center">
+                <h1 className="text-white text-3xl font-bold">How an Infinite Division of a Circle Becomes a Rectangle</h1>
             </div>
+            <canvas ref={canvasRef} />
+            <div className="absolute bottom-10 flex flex-col gap-4 items-center">
+                <div>
+                    <input
+                        type="number"
+                        placeholder="Enter number of segments"
+                        value={segments}
+                        onChange={handleInputChange}
+                        className="px-4 py-2 rounded-lg border-4 border-black focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                        min="1"
+                    />
+                    <button
+                        onClick={toggleStrokeColor}
+                        className="bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-lg border-4 border-black"
+                    >
+                        Line Color to White
+                    </button>
+                </div>
+                <div>
+                    <a href="https://www.buymeacoffee.com/materokattl"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Onigiri&emoji=🍙&slug=materokattl&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff" /></a>
+                </div>
+            </div>
+
         </div>
     );
 };
