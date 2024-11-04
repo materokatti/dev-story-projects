@@ -41,7 +41,15 @@ const CircleAreaPage: React.FC = () => {
                     context.stroke();
                 }
 
-                const baseX = canvas.width * 0.6;
+                const MODIFIER_BASE_X: Record<number, number> = {
+                    1: 0.65,
+                    2: 0.6,
+                    3: 0.6,
+                    4: 0.6,
+                };
+                const currentBaseXModifier = MODIFIER_BASE_X[segments] || 0.5;
+
+                const baseX = canvas.width * currentBaseXModifier;
                 const yOffset = radius;
                 const xOffset = radius * Math.sin(angleStep / 2);
                 const MODIFIER_MAP: Record<number, number> = {
