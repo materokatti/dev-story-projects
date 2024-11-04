@@ -50,20 +50,10 @@ const CircleAreaPage: React.FC = () => {
         const currentBaseXModifier = MODIFIER_BASE_X[segments] || 0.5;
 
         const baseX = canvas.width * currentBaseXModifier;
-        const yOffset = radius;
+        const yOffset = radius * Math.cos(angleStep / 2);
         const xOffset = radius * Math.sin(angleStep / 2);
-        const MODIFIER_MAP: Record<number, number> = {
-          2: 0.0000000000001,
-          3: 0.25,
-          4: 0.35,
-          5: 0.41,
-          6: 0.43,
-          7: 0.45,
-          8: 0.47,
-          9: 0.48,
-          10: 0.49,
-        };
-        const currentYModifier = MODIFIER_MAP[segments] || 0.5;
+
+        const currentYModifier = 0.5;
 
         for (let i = 0; i < segments; i++) {
           const centralAngle = i % 2 === 0 ? (3 * Math.PI) / 2 : Math.PI / 2;
@@ -127,11 +117,6 @@ const CircleAreaPage: React.FC = () => {
           >
             Line Color to {strokeColor === "black" ? "White" : "Black"}
           </button>
-        </div>
-        <div>
-          <a href='https://www.buymeacoffee.com/materokattl'>
-            <img src='https://img.buymeacoffee.com/button-api/?text=Buy me a Onigiri&emoji=🍙&slug=materokattl&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff' />
-          </a>
         </div>
       </div>
     </div>
