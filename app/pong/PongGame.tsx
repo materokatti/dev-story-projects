@@ -1,6 +1,6 @@
 "use client";
 
-import {useEffect, useRef} from "react";
+import { useEffect, useRef } from "react";
 import styles from "./PongGame.module.css";
 
 const PongGame: React.FC = () => {
@@ -9,10 +9,11 @@ const PongGame: React.FC = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const context = canvas.getContext("2d");
+    const context = canvas.getContext("2d") as CanvasRenderingContext2D;
     if (!context) return;
 
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -21,7 +22,7 @@ const PongGame: React.FC = () => {
     window.addEventListener("resize", resizeCanvas);
 
     const handleFullScreenChange = () => {
-      if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.fullscreenElement || document.fullscreenElement) {
         window.location.reload();
       }
     };
@@ -60,12 +61,14 @@ const PongGame: React.FC = () => {
     }
 
     function drawNet() {
+      if (!canvas) return;
       for (let i = 0; i <= canvas.height; i += 20) {
         drawRect(canvas.width / 2 - 1, i, 2, 10, "#fff");
       }
     }
 
     function resetBall() {
+      if (!canvas) return;
       ballX = canvas.width / 2;
       ballY = canvas.height / 2;
       ballSpeedX = -ballSpeedX;
@@ -87,6 +90,7 @@ const PongGame: React.FC = () => {
     }
 
     function update() {
+      if (!canvas) return;
       ballX += ballSpeedX;
       ballY += ballSpeedY;
 
@@ -114,6 +118,7 @@ const PongGame: React.FC = () => {
     }
 
     function render() {
+      if (!canvas) return;
       context.clearRect(0, 0, canvas.width, canvas.height);
       drawNet();
       drawRect(0, playerY, paddleWidth, paddleHeight, "#fff");
