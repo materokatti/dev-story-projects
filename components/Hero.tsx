@@ -26,7 +26,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
             <div className="absolute top-1/2 -translate-y-1/2 bg-slate-100 flex rounded-full">
                 <Image
                     className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-                    src="/public/Logo.svg"
+                    src="/Logo.svg"
                     alt="DevStory Logo"
                     width={180}
                     height={37}
