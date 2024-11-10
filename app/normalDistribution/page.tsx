@@ -26,9 +26,12 @@ const StandardDeviationGraph = () => {
         const centerX = width / 2;
         const centerY = height / 2;
 
-        // 시작점 계산
+        // 시작점 계산 (그래프의 왼쪽 끝)
         const startX = centerX - (graphWidth / 2);
         const startY = centerY - (graphHeight / 2);
+
+        // 그래프의 중심점 (실제 그래프가 그려질 중심)
+        const graphCenterX = startX + (graphWidth / 2);
 
         // 캔버스 초기화 및 배경 설정
         ctx.fillStyle = '#000000';
@@ -37,19 +40,18 @@ const StandardDeviationGraph = () => {
         // 축 그리기
         ctx.beginPath();
         ctx.moveTo(startX, startY + 350);
-        ctx.lineTo(startX + 550, startY + 350);
-        ctx.moveTo(startX + 300, startY + 50);
-        ctx.lineTo(startX + 300, startY + 350);
+        ctx.lineTo(startX + graphWidth, startY + 350);  // 가로축 길이를 graphWidth로 수정
+        ctx.moveTo(graphCenterX, startY + 50);          // 중심점 사용
+        ctx.lineTo(graphCenterX, startY + 350);         // 중심점 사용
         ctx.strokeStyle = '#ffffff';
         ctx.stroke();
 
         // 그래프 그리기
         ctx.beginPath();
-        ctx.moveTo(startX + 50, startY + 350);
 
         for (let x = -4; x <= 4; x += 0.1) {
             const y = normalDistribution(x, 0, sd);
-            const canvasX = startX + 300 + (x * 50);
+            const canvasX = graphCenterX + (x * 50);    // 중심점 기준으로 x좌표 계산
             const canvasY = startY + 350 - (y * 800);
 
             if (x === -4) {
@@ -67,7 +69,7 @@ const StandardDeviationGraph = () => {
         const region = new Path2D();
         for (let x = -sd; x <= sd; x += 0.1) {
             const y = normalDistribution(x, 0, sd);
-            const canvasX = startX + 300 + (x * 50);
+            const canvasX = graphCenterX + (x * 50);    // 중심점 기준으로 x좌표 계산
             const canvasY = startY + 350 - (y * 800);
 
             if (x === -sd) {
@@ -77,7 +79,7 @@ const StandardDeviationGraph = () => {
                 region.lineTo(canvasX, canvasY);
             }
         }
-        region.lineTo(startX + 300 + (sd * 50), startY + 350);
+        region.lineTo(graphCenterX + (sd * 50), startY + 350);
         region.closePath();
 
         ctx.fillStyle = 'rgba(33, 150, 243, 0.2)';
@@ -86,9 +88,9 @@ const StandardDeviationGraph = () => {
         // 레이블 추가
         ctx.fillStyle = '#ffffff';
         ctx.font = '12px Arial';
-        ctx.fillText('μ', startX + 290, startY + 370);
-        ctx.fillText('-σ', startX + 300 - (sd * 50) - 10, startY + 370);
-        ctx.fillText('+σ', startX + 300 + (sd * 50) - 10, startY + 370);
+        ctx.fillText('μ', graphCenterX - 10, startY + 370);            // 중심점 기준으로 조정
+        ctx.fillText('-σ', graphCenterX - (sd * 50) - 10, startY + 370); // 중심점 기준으로 조정
+        ctx.fillText('+σ', graphCenterX + (sd * 50) - 10, startY + 370); // 중심점 기준으로 조정
     };
 
     useEffect(() => {
