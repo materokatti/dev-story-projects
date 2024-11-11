@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const StandardDeviationGraph = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-    const [sd, setSd] = useState<number>(1.0);
+    const [sd, setSd] = useState<number>(2.0);
 
     // 정규분포 함수
     const normalDistribution = (x: number, mean: number, sd: number): number => {
@@ -61,7 +61,7 @@ const StandardDeviationGraph = () => {
             }
         }
 
-        ctx.strokeStyle = '#2196F3';
+        ctx.strokeStyle = '#fff';
         ctx.lineWidth = 2;
         ctx.stroke();
 
@@ -82,7 +82,7 @@ const StandardDeviationGraph = () => {
         region.lineTo(graphCenterX + (sd * 50), startY + 350);
         region.closePath();
 
-        ctx.fillStyle = 'rgba(33, 150, 243, 0.2)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
         ctx.fill(region);
 
         // 레이블 추가
@@ -123,12 +123,16 @@ const StandardDeviationGraph = () => {
             <div className="absolute w-full max-w-md space-y-2 bottom-10 left-1/2 -translate-x-1/2">
                 <input
                     type="range"
-                    min="0.1"
-                    max="3"
+                    min="1"
+                    max="4"
                     step="0.1"
                     value={sd}
                     onChange={handleSliderChange}
-                    className="w-full"
+                    className="w-full appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                    style={{
+                        WebkitAppearance: 'none',
+                        background: 'transparent'
+                    }}
                 />
                 <div className="text-center text-sm text-white">
                     Normal Distribution : {sd.toFixed(1)}
