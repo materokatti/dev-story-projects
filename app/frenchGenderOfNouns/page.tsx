@@ -75,7 +75,7 @@ const FrenchGenderQuiz: React.FC = () => {
                        ${isChanging ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
                     >
                         <h2 className="text-4xl font-bold mb-2">{currentWord.word}</h2>
-                        <p className="text-gray-500 italic">"{currentWord.translation}"</p>
+                        <p className="text-gray-500 italic">&quot;{currentWord.translation}&quot;</p>
                     </div>
 
                     <div className="flex gap-4 w-full">
