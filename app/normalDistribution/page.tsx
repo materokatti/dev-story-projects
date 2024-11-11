@@ -20,7 +20,7 @@ const StandardDeviationGraph = () => {
 
         // 그래프의 실제 크기 설정
         const graphWidth = 700;
-        const graphHeight = 400;
+        const graphHeight = 500;
 
         // 중앙 좌표 계산
         const centerX = width / 2;
