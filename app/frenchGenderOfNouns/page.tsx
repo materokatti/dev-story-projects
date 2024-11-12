@@ -1,25 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
+import { FRENCH_WORDS } from '@/lib/data/french-words';
+import { FrenchWord } from '@/lib/data/french-words';
 
 type Gender = 'feminine' | 'masculine';
-
-interface FrenchWord {
-    word: string;
-    gender: Gender;
-    translation: string;
-}
-
-const FRENCH_WORDS: FrenchWord[] = [
-    { word: 'maison', gender: 'feminine', translation: 'house' },
-    { word: 'livre', gender: 'masculine', translation: 'book' },
-    { word: 'table', gender: 'feminine', translation: 'table' },
-    { word: 'château', gender: 'masculine', translation: 'castle' },
-    { word: 'fleur', gender: 'feminine', translation: 'flower' },
-    { word: 'ordinateur', gender: 'masculine', translation: 'computer' },
-    { word: 'voiture', gender: 'feminine', translation: 'car' },
-    { word: 'soleil', gender: 'masculine', translation: 'sun' },
-];
 
 const FrenchGenderQuiz: React.FC = () => {
     const [currentWord, setCurrentWord] = useState<FrenchWord>(FRENCH_WORDS[0]);
@@ -99,7 +84,7 @@ const FrenchGenderQuiz: React.FC = () => {
                 {showResult && (
                     <div
                         className={`absolute inset-0 flex items-center justify-center bg-opacity-90 
-                     transition-opacity duration-300
+                     transition-opacity duration-300 rounded-lg
                      ${isCorrect ? 'bg-green-500' : 'bg-red-500'} text-white text-4xl font-bold`}
                     >
                         {isCorrect ? 'Correct!' : 'Wrong!'}
