@@ -1,18 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 
 export default function Home() {
-
   const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhost:8080') // Nest.js 백엔드 URL
-      .then((res) => res.json())
-      .then((data) => setData(data));
-    console.log('data :', data);
-  }, []);
 
   const consoleStyle = `
     font-size: 20px;
@@ -32,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col">
+      <main className='flex min-h-screen flex-col'>
         <Hero />
         <Projects />
       </main>
