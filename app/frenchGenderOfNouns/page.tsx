@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
-import { FRENCH_WORDS } from '@/lib/data/french-words';
-import { FrenchWord } from '@/lib/data/french-words';
+import { FRENCH_WORDS } from '@/lib/data/frenchWords';
+import { FrenchWord } from '@/lib/data/frenchWords';
 
 type Gender = 'feminine' | 'masculine';
 
