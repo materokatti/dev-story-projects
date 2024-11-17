@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import {Card, CardContent} from "@/components/ui/Card";
 import {FRENCH_WORDS} from "@/lib/data/frenchWords";
-import {FrenchVocabularyForQuiz} from "@/types/index";
+import {FrenchVocabularyForQuiz} from "@/types";
 import {frenchWordsGender} from "@/types";
 
 const FrenchGenderQuiz: React.FC = () => {
@@ -15,7 +15,7 @@ const FrenchGenderQuiz: React.FC = () => {
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [isChanging, setIsChanging] = useState<boolean>(false);
 
-  const getRandomWord = (): FrenchWord => {
+  const getRandomWord = (): FrenchVocabularyForQuiz => {
     const randomIndex = Math.floor(Math.random() * FRENCH_WORDS.length);
     return FRENCH_WORDS[randomIndex];
   };
