@@ -120,6 +120,9 @@ const StandardDeviationGraph = () => {
                 ref={canvasRef}
                 className='absolute top-0 left-0 w-full h-full'
             />
+            <div className="absolute top-20 w-full">
+                <h1 className="text-center text-2xl text-white">Standard Deviation</h1>
+            </div>
             <div className="absolute w-full max-w-md space-y-2 bottom-10 left-1/2 -translate-x-1/2">
                 <input
                     type="range"
