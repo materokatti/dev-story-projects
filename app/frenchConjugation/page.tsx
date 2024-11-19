@@ -103,7 +103,7 @@ const FrenchConjugationQuiz: React.FC = () => {
 
     const getInputColor = (pronoun: string) => {
         if (!showResults) return "";
-        const isCorrect = userInputs[pronoun].toLowerCase().trim() === currentVerb.conjugations[pronoun];
+        const isCorrect = userInputs[pronoun as keyof typeof userInputs].toLowerCase().trim() === currentVerb.conjugations[pronoun as keyof typeof currentVerb.conjugations];
         return isCorrect ? "bg-green-100" : "bg-red-100";
     };
 
