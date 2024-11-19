@@ -3,7 +3,18 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 
-const FRENCH_VERBS = [
+// Type definitions
+type BasePronouns = "je" | "tu" | "il" | "nous" | "vous" | "ils";
+type DisplayPronouns = "je" | "tu" | "il/elle" | "nous" | "vous" | "ils/elles";
+type Conjugations = Record<BasePronouns, string>;
+
+interface FrenchVerb {
+    infinitive: string;
+    translation: string;
+    conjugations: Conjugations;
+}
+
+const FRENCH_VERBS: FrenchVerb[] = [
     {
         infinitive: "parler",
         translation: "to speak",
@@ -31,11 +42,11 @@ const FRENCH_VERBS = [
     // Add more verbs as needed
 ];
 
-const PRONOUNS = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"] as const;
+const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
 
 const FrenchConjugationQuiz: React.FC = () => {
-    const [currentVerb, setCurrentVerb] = useState(FRENCH_VERBS[0]);
-    const [userInputs, setUserInputs] = useState<Record<string, string>>({
+    const [currentVerb, setCurrentVerb] = useState<FrenchVerb>(FRENCH_VERBS[0]);
+    const [userInputs, setUserInputs] = useState<Conjugations>({
         je: "",
         tu: "",
         il: "",
@@ -48,12 +59,12 @@ const FrenchConjugationQuiz: React.FC = () => {
     const [bestStreak, setBestStreak] = useState(0);
     const [isChanging, setIsChanging] = useState(false);
 
-    const getRandomVerb = () => {
+    const getRandomVerb = (): FrenchVerb => {
         const randomIndex = Math.floor(Math.random() * FRENCH_VERBS.length);
         return FRENCH_VERBS[randomIndex];
     };
 
-    const handleInputChange = (pronoun: string, value: string) => {
+    const handleInputChange = (pronoun: BasePronouns, value: string) => {
         setUserInputs(prev => ({
             ...prev,
             [pronoun]: value
@@ -63,16 +74,12 @@ const FrenchConjugationQuiz: React.FC = () => {
     const checkAnswers = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const results = {
-            je: userInputs.je.toLowerCase().trim() === currentVerb.conjugations.je,
-            tu: userInputs.tu.toLowerCase().trim() === currentVerb.conjugations.tu,
-            il: userInputs.il.toLowerCase().trim() === currentVerb.conjugations.il,
-            nous: userInputs.nous.toLowerCase().trim() === currentVerb.conjugations.nous,
-            vous: userInputs.vous.toLowerCase().trim() === currentVerb.conjugations.vous,
-            ils: userInputs.ils.toLowerCase().trim() === currentVerb.conjugations.ils,
-        };
+        const results = Object.entries(currentVerb.conjugations).map(([pronoun, correctAnswer]) => {
+            const userAnswer = userInputs[pronoun as BasePronouns].toLowerCase().trim();
+            return userAnswer === correctAnswer;
+        });
 
-        const allCorrect = Object.values(results).every(result => result);
+        const allCorrect = results.every(result => result);
         setShowResults(true);
         setIsChanging(true);
 
@@ -101,10 +108,14 @@ const FrenchConjugationQuiz: React.FC = () => {
         }, 2000);
     };
 
-    const getInputColor = (pronoun: string) => {
+    const getInputColor = (pronoun: BasePronouns): string => {
         if (!showResults) return "";
-        const isCorrect = userInputs[pronoun as keyof typeof userInputs].toLowerCase().trim() === currentVerb.conjugations[pronoun as keyof typeof currentVerb.conjugations];
+        const isCorrect = userInputs[pronoun].toLowerCase().trim() === currentVerb.conjugations[pronoun];
         return isCorrect ? "bg-green-100" : "bg-red-100";
+    };
+
+    const getBasePronoun = (displayPronoun: DisplayPronouns): BasePronouns => {
+        return displayPronoun.split('/')[0] as BasePronouns;
     };
 
     return (
@@ -128,23 +139,26 @@ const FrenchConjugationQuiz: React.FC = () => {
                         <p className="text-gray-500 italic mb-8">&quot;{currentVerb.translation}&quot;</p>
 
                         <form onSubmit={checkAnswers} className="space-y-4 w-full">
-                            {PRONOUNS.map((pronoun) => (
-                                <div key={pronoun} className="flex items-center gap-4 justify-between">
-                                    <span className="text-xl w-20">{pronoun}</span>
-                                    <Input
-                                        type="text"
-                                        value={userInputs[pronoun.split('/')[0]]}
-                                        onChange={(e) => handleInputChange(pronoun.split('/')[0], e.target.value)}
-                                        className={`w-40 text-xl ${getInputColor(pronoun.split('/')[0])}`}
-                                        placeholder="type here..."
-                                    />
-                                    {showResults && (
-                                        <span className="text-lg w-40">
-                                            {currentVerb.conjugations[pronoun.split('/')[0]]}
-                                        </span>
-                                    )}
-                                </div>
-                            ))}
+                            {PRONOUNS.map((displayPronoun) => {
+                                const basePronoun = getBasePronoun(displayPronoun);
+                                return (
+                                    <div key={displayPronoun} className="flex items-center gap-4 justify-between">
+                                        <span className="text-xl w-20">{displayPronoun}</span>
+                                        <Input
+                                            type="text"
+                                            value={userInputs[basePronoun]}
+                                            onChange={(e) => handleInputChange(basePronoun, e.target.value)}
+                                            className={`w-40 text-xl ${getInputColor(basePronoun)}`}
+                                            placeholder="type here..."
+                                        />
+                                        {showResults && (
+                                            <span className="text-lg w-40">
+                                                {currentVerb.conjugations[basePronoun]}
+                                            </span>
+                                        )}
+                                    </div>
+                                );
+                            })}
                             <button
                                 type="submit"
                                 className="mt-8 w-full py-3 rounded-lg bg-blue-600 text-white font-bold 
