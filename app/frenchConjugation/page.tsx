@@ -54,6 +54,8 @@ const FrenchConjugationQuiz: React.FC = () => {
         vous: "",
         ils: ""
     });
+    const VERV_CSS_TRANSITION_DURATION = 300;
+    const LOADING_DELAY = 1000;
     const [showResults, setShowResults] = useState(false);
     const [streak, setStreak] = useState(0);
     const [bestStreak, setBestStreak] = useState(0);
@@ -81,7 +83,6 @@ const FrenchConjugationQuiz: React.FC = () => {
 
         const allCorrect = results.every(result => result);
         setShowResults(true);
-        setIsChanging(true);
 
         if (allCorrect) {
             const newStreak = streak + 1;
@@ -94,6 +95,7 @@ const FrenchConjugationQuiz: React.FC = () => {
         }
 
         setTimeout(() => {
+            setIsChanging(true);
             setShowResults(false);
             setCurrentVerb(getRandomVerb());
             setUserInputs({
@@ -104,8 +106,11 @@ const FrenchConjugationQuiz: React.FC = () => {
                 vous: "",
                 ils: ""
             });
-            setIsChanging(false);
-        }, 2000);
+            setTimeout(() => {
+                setIsChanging(false);
+            }, VERV_CSS_TRANSITION_DURATION);
+        }, LOADING_DELAY);
+
     };
 
     const getInputColor = (pronoun: BasePronouns): string => {
@@ -132,7 +137,7 @@ const FrenchConjugationQuiz: React.FC = () => {
             <Card className="w-[600px] min-h-[500px] flex flex-col items-center justify-center bg-white relative p-8">
                 <CardContent className="flex flex-col items-center gap-8 w-full">
                     <div
-                        className={`text-center transition-all duration-300 ease-in-out w-full
+                        className={`text-center transition-all duration-[${VERV_CSS_TRANSITION_DURATION}] ease-in-out w-full
                        ${isChanging ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}
                     >
                         <h2 className="text-4xl font-bold mb-2">{currentVerb.infinitive}</h2>
@@ -173,7 +178,7 @@ const FrenchConjugationQuiz: React.FC = () => {
             </Card>
 
             <p className="text-gray-400 mt-8 text-center">
-                Conjugate the verb for all pronouns
+                Conjugate the french verb for all pronouns
             </p>
         </div>
     );
