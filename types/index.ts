@@ -22,3 +22,13 @@ export interface FrenchVocabularyForQuiz {
   isException?: boolean;
   category?: FrenchWordCategory;
 }
+
+export type BasePronouns = "je" | "tu" | "il" | "nous" | "vous" | "ils";
+export type DisplayPronouns = "je" | "tu" | "il/elle" | "nous" | "vous" | "ils/elles";
+export type Conjugations = Record<BasePronouns, string>;
+
+export interface FrenchVerb {
+  infinitive: string;
+  translation: string;
+  conjugations: Conjugations;
+}

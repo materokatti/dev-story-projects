@@ -2,17 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-
-// Type definitions
-type BasePronouns = "je" | "tu" | "il" | "nous" | "vous" | "ils";
-type DisplayPronouns = "je" | "tu" | "il/elle" | "nous" | "vous" | "ils/elles";
-type Conjugations = Record<BasePronouns, string>;
-
-interface FrenchVerb {
-    infinitive: string;
-    translation: string;
-    conjugations: Conjugations;
-}
+import { FrenchVerb, Conjugations, DisplayPronouns, BasePronouns } from '@/types';
 
 const FRENCH_VERBS: FrenchVerb[] = [
     {
