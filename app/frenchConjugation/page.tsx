@@ -3,36 +3,8 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import { FrenchVerb, Conjugations, DisplayPronouns, BasePronouns } from '@/types';
+import { FRENCH_VERBS, PRONOUNS } from '@/lib/data/frenchVerbConjugation';
 
-const FRENCH_VERBS: FrenchVerb[] = [
-    {
-        infinitive: "parler",
-        translation: "to speak",
-        conjugations: {
-            je: "parle",
-            tu: "parles",
-            il: "parle",
-            nous: "parlons",
-            vous: "parlez",
-            ils: "parlent"
-        }
-    },
-    {
-        infinitive: "manger",
-        translation: "to eat",
-        conjugations: {
-            je: "mange",
-            tu: "manges",
-            il: "mange",
-            nous: "mangeons",
-            vous: "mangez",
-            ils: "mangent"
-        }
-    },
-    // Add more verbs as needed
-];
-
-const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
 
 const FrenchConjugationQuiz: React.FC = () => {
     const [currentVerb, setCurrentVerb] = useState<FrenchVerb>(FRENCH_VERBS[0]);
