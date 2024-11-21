@@ -25,7 +25,6 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             ils: "mangent"
         }
     },
-    // Add more verbs as needed
 ];
 
 export const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
