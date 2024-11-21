@@ -156,7 +156,7 @@ const FrenchConjugationQuiz: React.FC = () => {
                     {isCompleted ? (
                         <div className="text-center">
                             <h2 className="text-4xl font-bold mb-4">Congratulations! 🎉</h2>
-                            <p className="text-xl mb-8">You've mastered all {FRENCH_VERBS.length} verbs!</p>
+                            <p className="text-xl mb-8">You&apos;ve mastered all {FRENCH_VERBS.length} verbs!</p>
                             <button
                                 onClick={handleReset}
                                 className="py-3 px-6 rounded-lg bg-green-600 text-white font-bold 
