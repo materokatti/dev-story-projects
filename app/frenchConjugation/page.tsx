@@ -20,7 +20,7 @@ const FrenchConjugationQuiz: React.FC = () => {
     });
 
     const VERB_CSS_TRANSITION_DURATION = 300;
-    const LOADING_DELAY = 1000;
+    const LOADING_DELAY = 2000;
     const [showResults, setShowResults] = useState(false);
     const [streak, setStreak] = useState(0);
     const [bestStreak, setBestStreak] = useState(0);
