@@ -207,7 +207,6 @@ const FrenchConjugationQuiz: React.FC = () => {
                     )}
                 </CardContent>
             </Card>
-
             <p className="text-gray-400 mt-8 text-center">
                 Conjugate the french verb for all pronouns
             </p>
