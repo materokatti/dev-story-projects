@@ -6,7 +6,6 @@ import { FrenchVerb, Conjugations, DisplayPronouns, BasePronouns } from '@/types
 import { FRENCH_VERBS, PRONOUNS } from '@/lib/data/frenchVerbConjugation';
 
 const FrenchConjugationQuiz: React.FC = () => {
-    // 남은 동사들과 맞춘 동사들을 추적
     const [remainingVerbs, setRemainingVerbs] = useState<FrenchVerb[]>(FRENCH_VERBS);
     const [masteredVerbs, setMasteredVerbs] = useState<FrenchVerb[]>([]);
     const [currentVerb, setCurrentVerb] = useState<FrenchVerb>(FRENCH_VERBS[0]);
@@ -51,7 +50,6 @@ const FrenchConjugationQuiz: React.FC = () => {
         setShowResults(true);
 
         if (allCorrect) {
-            // 맞춘 동사 처리
             const newMasteredVerbs = [...masteredVerbs, currentVerb];
             const newRemainingVerbs = remainingVerbs.filter(verb => verb.infinitive !== currentVerb.infinitive);
 
@@ -64,7 +62,6 @@ const FrenchConjugationQuiz: React.FC = () => {
                 setBestStreak(newStreak);
             }
 
-            // 모든 동사를 맞췄는지 확인
             if (newRemainingVerbs.length === 0) {
                 setIsCompleted(true);
                 return;
@@ -85,20 +82,12 @@ const FrenchConjugationQuiz: React.FC = () => {
                 ils: ""
             });
 
-            // 다음 동사 선택
             if (allCorrect) {
-                // 맞췄을 경우 남은 동사들 중에서 선택
                 const nextVerb = getRandomVerb();
                 setCurrentVerb(nextVerb);
             } else {
-                // 틀렸을 경우 현재 동사를 다시 풀게 할 확률 30%
-                const shouldRepeatCurrentVerb = Math.random() < 0.3;
-                if (shouldRepeatCurrentVerb) {
-                    // 현재 동사 유지
-                } else {
-                    const nextVerb = getRandomVerb();
-                    setCurrentVerb(nextVerb);
-                }
+                const nextVerb = getRandomVerb();
+                setCurrentVerb(nextVerb);
             }
 
             setTimeout(() => {
@@ -136,30 +125,34 @@ const FrenchConjugationQuiz: React.FC = () => {
     };
 
     return (
-        <div className="w-screen h-screen flex flex-col items-center justify-center bg-gray-900">
-            <div className="absolute top-10 flex items-center gap-4">
-                <div className="bg-purple-500 rounded-lg px-6 py-2 flex items-center gap-2">
-                    <span className="text-white text-xl font-bold">
+        <div className="w-full min-h-screen px-4 md:px-0 lg:px-0 flex flex-col items-center justify-center bg-gray-900">
+            {/* Stats Bar */}
+            <div className="w-full md:absolute lg:absolute md:top-10 lg:top-10 flex flex-col md:flex-row lg:flex-row items-center justify-center gap-2 md:gap-4 lg:gap-6 mb-4 md:mb-0 lg:mb-0">
+                <div className="w-full md:w-auto lg:w-auto bg-purple-500 rounded-lg px-4 md:px-6 lg:px-8 py-2 flex items-center justify-center gap-2">
+                    <span className="text-white text-lg md:text-xl lg:text-2xl font-bold">
                         Progress: {masteredVerbs.length}/{FRENCH_VERBS.length}
                     </span>
                 </div>
-                <div className="bg-yellow-500 rounded-lg px-6 py-2 flex items-center gap-2">
-                    <span className="text-xl font-bold">🏆 Best: {bestStreak}</span>
+                <div className="w-full md:w-auto lg:w-auto bg-yellow-500 rounded-lg px-4 md:px-6 lg:px-8 py-2 flex items-center justify-center gap-2">
+                    <span className="text-lg md:text-xl lg:text-2xl font-bold">🏆 Best: {bestStreak}</span>
                 </div>
-                <div className="bg-blue-500 text-white rounded-lg px-6 py-2 flex items-center gap-2">
-                    <span className="text-xl font-bold">⭐ Current: {streak}</span>
+                <div className="w-full md:w-auto lg:w-auto bg-blue-500 text-white rounded-lg px-4 md:px-6 lg:px-8 py-2 flex items-center justify-center gap-2">
+                    <span className="text-lg md:text-xl lg:text-2xl font-bold">⭐ Current: {streak}</span>
                 </div>
             </div>
 
-            <Card className="w-[600px] min-h-[500px] flex flex-col items-center justify-center bg-white relative p-8">
-                <CardContent className="flex flex-col items-center gap-8 w-full">
+            {/* Main Card */}
+            <Card className="w-full md:w-[600px] lg:w-[800px] min-h-[500px] flex flex-col items-center justify-center bg-white relative p-4 md:p-8 lg:p-10 mx-4 md:mx-0 lg:mx-0 md:mt-20">
+                <CardContent className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 w-full">
                     {isCompleted ? (
                         <div className="text-center">
-                            <h2 className="text-4xl font-bold mb-4">Congratulations! 🎉</h2>
-                            <p className="text-xl mb-8">You&apos;ve mastered all {FRENCH_VERBS.length} verbs!</p>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Congratulations! 🎉</h2>
+                            <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 lg:mb-10">
+                                You&apos;ve mastered all {FRENCH_VERBS.length} verbs!
+                            </p>
                             <button
                                 onClick={handleReset}
-                                className="py-3 px-6 rounded-lg bg-green-600 text-white font-bold 
+                                className="py-3 px-6 lg:px-8 rounded-lg bg-green-600 text-white font-bold 
                                          hover:bg-green-700 transition-colors duration-200"
                             >
                                 Start Over
@@ -170,33 +163,35 @@ const FrenchConjugationQuiz: React.FC = () => {
                             className={`text-center transition-all duration-[${VERB_CSS_TRANSITION_DURATION}] ease-in-out w-full
                            ${isChanging ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}
                         >
-                            <h2 className="text-4xl font-bold mb-2">{currentVerb.infinitive}</h2>
-                            <p className="text-gray-500 italic mb-8">&quot;{currentVerb.translation}&quot;</p>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">{currentVerb.infinitive}</h2>
+                            <p className="text-gray-500 italic mb-6 md:mb-8 lg:mb-10">&quot;{currentVerb.translation}&quot;</p>
 
                             <form onSubmit={checkAnswers} className="space-y-4 w-full">
                                 {PRONOUNS.map((displayPronoun) => {
                                     const basePronoun = getBasePronoun(displayPronoun);
                                     return (
-                                        <div key={displayPronoun} className="flex items-center gap-4 justify-between">
-                                            <span className="text-xl w-20">{displayPronoun}</span>
-                                            <Input
-                                                type="text"
-                                                value={userInputs[basePronoun]}
-                                                onChange={(e) => handleInputChange(basePronoun, e.target.value)}
-                                                className={`w-40 text-xl ${getInputColor(basePronoun)}`}
-                                                placeholder="type here..."
-                                            />
-                                            {showResults && (
-                                                <span className="text-lg w-40">
-                                                    {currentVerb.conjugations[basePronoun]}
-                                                </span>
-                                            )}
+                                        <div key={displayPronoun} className="flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center gap-2 md:gap-4 lg:gap-6 md:justify-between lg:justify-between">
+                                            <span className="text-lg md:text-xl lg:text-2xl w-full md:w-20 lg:w-24">{displayPronoun}</span>
+                                            <div className="w-full flex flex-row items-center gap-2">
+                                                <Input
+                                                    type="text"
+                                                    value={userInputs[basePronoun]}
+                                                    onChange={(e) => handleInputChange(basePronoun, e.target.value)}
+                                                    className={`w-full md:w-40 lg:w-48 text-lg md:text-xl lg:text-2xl ${getInputColor(basePronoun)}`}
+                                                    placeholder="type here..."
+                                                />
+                                                {showResults && (
+                                                    <span className="text-base md:text-lg lg:text-xl w-full md:w-40 lg:w-48">
+                                                        {currentVerb.conjugations[basePronoun]}
+                                                    </span>
+                                                )}
+                                            </div>
                                         </div>
                                     );
                                 })}
                                 <button
                                     type="submit"
-                                    className="mt-8 w-full py-3 rounded-lg bg-blue-600 text-white font-bold 
+                                    className="mt-6 md:mt-8 lg:mt-10 w-full py-3 rounded-lg bg-blue-600 text-white font-bold 
                                      hover:bg-blue-700 transition-colors duration-200 
                                      hover:scale-105 active:scale-95"
                                 >
@@ -207,7 +202,7 @@ const FrenchConjugationQuiz: React.FC = () => {
                     )}
                 </CardContent>
             </Card>
-            <p className="text-gray-400 mt-8 text-center">
+            <p className="text-gray-400 mt-6 md:mt-8 lg:mt-10 text-center px-4">
                 Conjugate the french verb for all pronouns
             </p>
         </div>
