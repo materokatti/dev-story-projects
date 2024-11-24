@@ -177,7 +177,7 @@ const FrenchConjugationQuiz: React.FC = () => {
                                                     type="text"
                                                     value={userInputs[basePronoun]}
                                                     onChange={(e) => handleInputChange(basePronoun, e.target.value)}
-                                                    className={`w-full md:w-40 lg:w-48 text-lg md:text-xl lg:text-2xl ${getInputColor(basePronoun)}`}
+                                                    className={`w-full md:w-80 lg:w-96 text-lg md:text-xl lg:text-2xl ${getInputColor(basePronoun)}`}
                                                     placeholder="type here..."
                                                 />
                                                 {showResults && (
