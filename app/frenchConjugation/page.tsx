@@ -66,34 +66,52 @@ const FrenchConjugationQuiz: React.FC = () => {
                 setIsCompleted(true);
                 return;
             }
-        } else {
-            setStreak(0);
-        }
-
-        setTimeout(() => {
-            setIsChanging(true);
-            setShowResults(false);
-            setUserInputs({
-                je: "",
-                tu: "",
-                il: "",
-                nous: "",
-                vous: "",
-                ils: ""
-            });
-
-            if (allCorrect) {
-                const nextVerb = getRandomVerb();
-                setCurrentVerb(nextVerb);
-            } else {
-                const nextVerb = getRandomVerb();
-                setCurrentVerb(nextVerb);
-            }
 
             setTimeout(() => {
-                setIsChanging(false);
-            }, VERB_CSS_TRANSITION_DURATION);
-        }, LOADING_DELAY);
+                setIsChanging(true);
+                setShowResults(false);
+                setUserInputs({
+                    je: "",
+                    tu: "",
+                    il: "",
+                    nous: "",
+                    vous: "",
+                    ils: ""
+                });
+
+                if (newRemainingVerbs.length > 0) {
+                    const nextVerb = newRemainingVerbs[Math.floor(Math.random() * newRemainingVerbs.length)];
+                    setCurrentVerb(nextVerb);
+                }
+
+                setTimeout(() => {
+                    setIsChanging(false);
+                }, VERB_CSS_TRANSITION_DURATION);
+            }, LOADING_DELAY);
+        } else {
+            // 틀린 경우
+            setStreak(0);
+
+            setTimeout(() => {
+                setIsChanging(true);
+                setShowResults(false);
+                setUserInputs({
+                    je: "",
+                    tu: "",
+                    il: "",
+                    nous: "",
+                    vous: "",
+                    ils: ""
+                });
+
+                const nextVerb = remainingVerbs[Math.floor(Math.random() * remainingVerbs.length)];
+                setCurrentVerb(nextVerb);
+
+                setTimeout(() => {
+                    setIsChanging(false);
+                }, VERB_CSS_TRANSITION_DURATION);
+            }, LOADING_DELAY);
+        }
     };
 
     const getInputColor = (pronoun: BasePronouns): string => {
