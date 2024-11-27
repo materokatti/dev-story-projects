@@ -209,9 +209,13 @@ const FrenchConjugationQuiz: React.FC = () => {
                                 })}
                                 <button
                                     type="submit"
-                                    className="mt-6 md:mt-8 lg:mt-10 w-full py-3 rounded-lg bg-blue-600 text-white font-bold 
-                                     hover:bg-blue-700 transition-colors duration-200 
-                                     hover:scale-105 active:scale-95"
+                                    disabled={showResults}
+                                    className={`mt-6 md:mt-8 lg:mt-10 w-full py-3 rounded-lg font-bold 
+        transition-colors duration-200 hover:scale-105 active:scale-95
+        ${showResults
+                                            ? 'bg-gray-400 cursor-not-allowed hover:bg-gray-400 hover:scale-100'
+                                            : 'bg-blue-600 text-white hover:bg-blue-700'
+                                        }`}
                                 >
                                     Check Answers
                                 </button>
@@ -223,7 +227,7 @@ const FrenchConjugationQuiz: React.FC = () => {
             <p className="text-gray-400 mt-6 md:mt-8 lg:mt-10 text-center px-4">
                 Conjugate the french verb for all pronouns
             </p>
-        </div>
+        </div >
     );
 };
 
