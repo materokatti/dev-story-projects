@@ -213,7 +213,7 @@ const FrenchConjugationQuiz: React.FC = () => {
                                     className={`mt-6 md:mt-8 lg:mt-10 w-full py-3 rounded-lg font-bold 
         transition-colors duration-200 hover:scale-105 active:scale-95
         ${showResults
-                                            ? 'bg-gray-400 cursor-not-allowed hover:bg-gray-400 hover:scale-100'
+                                            ? 'bg-gray-400 text-gray-200 cursor-not-allowed hover:scale-100 active:scale-100'
                                             : 'bg-blue-600 text-white hover:bg-blue-700'
                                         }`}
                                 >

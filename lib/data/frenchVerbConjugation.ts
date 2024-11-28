@@ -25,42 +25,42 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             ils: "mangent"
         }
     },
-    {
-        "infinitive": "être",
-        "translation": "to be",
-        "conjugations": {
-            "je": "suis",
-            "tu": "es",
-            "il": "est",
-            "nous": "sommes",
-            "vous": "êtes",
-            "ils": "sont"
-        }
-    },
-    {
-        "infinitive": "avoir",
-        "translation": "to have",
-        "conjugations": {
-            "je": "'ai",
-            "tu": "as",
-            "il": "a",
-            "nous": "avons",
-            "vous": "avez",
-            "ils": "ont"
-        }
-    },
-    {
-        "infinitive": "aller",
-        "translation": "to go",
-        "conjugations": {
-            "je": "vais",
-            "tu": "vas",
-            "il": "va",
-            "nous": "allons",
-            "vous": "allez",
-            "ils": "vont"
-        }
-    }
+    // {
+    //     "infinitive": "être",
+    //     "translation": "to be",
+    //     "conjugations": {
+    //         "je": "suis",
+    //         "tu": "es",
+    //         "il": "est",
+    //         "nous": "sommes",
+    //         "vous": "êtes",
+    //         "ils": "sont"
+    //     }
+    // },
+    // {
+    //     "infinitive": "avoir",
+    //     "translation": "to have",
+    //     "conjugations": {
+    //         "je": "ai",
+    //         "tu": "as",
+    //         "il": "a",
+    //         "nous": "avons",
+    //         "vous": "avez",
+    //         "ils": "ont"
+    //     }
+    // },
+    // {
+    //     "infinitive": "aller",
+    //     "translation": "to go",
+    //     "conjugations": {
+    //         "je": "vais",
+    //         "tu": "vas",
+    //         "il": "va",
+    //         "nous": "allons",
+    //         "vous": "allez",
+    //         "ils": "vont"
+    //     }
+    // }
 ];
 
 export const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
