@@ -41,12 +41,24 @@ export const FRENCH_VERBS: FrenchVerb[] = [
         "infinitive": "avoir",
         "translation": "to have",
         "conjugations": {
-            "je": "ai",
+            "je": "'ai",
             "tu": "as",
             "il": "a",
             "nous": "avons",
             "vous": "avez",
             "ils": "ont"
+        }
+    },
+    {
+        "infinitive": "aller",
+        "translation": "to go",
+        "conjugations": {
+            "je": "vais",
+            "tu": "vas",
+            "il": "va",
+            "nous": "allons",
+            "vous": "allez",
+            "ils": "vont"
         }
     }
 ];
