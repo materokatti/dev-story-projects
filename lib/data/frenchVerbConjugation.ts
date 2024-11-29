@@ -60,6 +60,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             "vous": "allez",
             "ils": "vont"
         }
+    },
+    {
+        "infinitive": "faire",
+        "translation": "to do",
+        "conjugations": {
+            "je": "fais",
+            "tu": "fais",
+            "il": "fait",
+            "nous": "faisons",
+            "vous": "faites",
+            "ils": "font"
+        }
     }
 ];
 
