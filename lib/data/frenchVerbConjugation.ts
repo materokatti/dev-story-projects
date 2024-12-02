@@ -72,7 +72,19 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             "vous": "faites",
             "ils": "font"
         }
-    }
+    },
+    {
+        "infinitive": "dire",
+        "translation": "to say",
+        "conjugations": {
+            "je": "dis",
+            "tu": "dis",
+            "il": "dit",
+            "nous": "disons",
+            "vous": "dites",
+            "ils": "disent"
+        }
+    },
 ];
 
 export const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
