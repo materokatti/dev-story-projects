@@ -85,6 +85,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             "ils": "disent"
         }
     },
+    {
+        "infinitive": "devoir",
+        "translation": "to have to",
+        "conjugations": {
+            "je": "dois",
+            "tu": "dois",
+            "il": "doit",
+            "nous": "devons",
+            "vous": "devez",
+            "ils": "doivent"
+        }
+    }
 ];
 
 export const PRONOUNS: DisplayPronouns[] = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
