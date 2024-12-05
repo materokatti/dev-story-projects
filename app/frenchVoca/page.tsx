@@ -183,7 +183,6 @@ const FrenchVocabQuiz: React.FC = () => {
             }
 
             setTimeout(() => {
-                setIsChanging(true);
                 setShowResult(false);
                 setUserInput("");
 
@@ -191,10 +190,6 @@ const FrenchVocabQuiz: React.FC = () => {
                     const nextWord = getRandomWord();
                     setCurrentWord(nextWord);
                 }
-
-                setTimeout(() => {
-                    setIsChanging(false);
-                }, WORD_CSS_TRANSITION_DURATION);
             }, LOADING_DELAY);
         } else {
             setStreak(0);
@@ -267,8 +262,7 @@ const FrenchVocabQuiz: React.FC = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className={`text-center transition-all duration-300 ease-in-out w-full
-                           ${isChanging ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"}`}>
+                        <div className="text-center transition-all duration-300 ease-in-out w-full">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{currentWord.english}</h2>
 
                             <form onSubmit={checkAnswer} className="space-y-4 w-full">
