@@ -96,6 +96,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             "vous": "devez",
             "ils": "doivent"
         }
+    },
+    {
+        infinitive: "pouvoir",
+        translation: "to be able to",
+        conjugations: {
+            je: "peux",
+            tu: "peux",
+            il: "peut",
+            nous: "pouvons",
+            vous: "pouvez",
+            ils: "peuvent"
+        }
     }
 ];
 
