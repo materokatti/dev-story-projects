@@ -251,7 +251,7 @@ const FrenchVocabQuiz: React.FC = () => {
                         <div className="text-center">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Congratulations! 🎉</h2>
                             <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 lg:mb-10">
-                                You've mastered all {FRENCH_WORDS.length} words!
+                                You&apos;ve mastered all {FRENCH_WORDS.length} words!
                             </p>
                             <button
                                 onClick={handleReset}
