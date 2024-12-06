@@ -230,7 +230,6 @@ const FrenchVocabQuiz: React.FC = () => {
     setStreak(0);
     setIsCompleted(false);
     setShowResult(false);
-    setIsChanging(false);
   };
 
   return (
