@@ -29,5 +29,15 @@ export const projectsData = [
         href: "frenchGenderOfNouns",
         title: "French Gender Quiz",
         description: "A quiz to test your knowledge of French Gender of Nouns"
+    },
+    {
+        href: "frenchConjugation",
+        title: "French Verb Conjugation",
+        description: "A quiz to test your knowledge of French Verb Conjugation"
+    },
+    {
+        href: "frenchVoca",
+        title: "French Vocabulary Quiz",
+        description: "A quiz to test your knowledge of French Vocabulary"
     }
 ];
