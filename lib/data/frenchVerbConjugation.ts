@@ -133,6 +133,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             ils: "viennent",
         },
     },
+    {
+        infinitive: "prendre",
+        translation: "to take",
+        conjugations: {
+            je: "prends",
+            tu: "prends",
+            il: "prend",
+            nous: "prenons",
+            vous: "prenez",
+            ils: "prennent",
+        },
+    }
 ];
 
 export const PRONOUNS: DisplayPronouns[] = [
