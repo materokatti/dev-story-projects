@@ -144,6 +144,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "prenez",
             ils: "prennent",
         },
+    },
+    {
+        infinitive: "savoir",
+        translation: "to know",
+        conjugations: {
+            je: "sais",
+            tu: "sais",
+            il: "sait",
+            nous: "savons",
+            vous: "savez",
+            ils: "savent",
+        },
     }
 ];
 
