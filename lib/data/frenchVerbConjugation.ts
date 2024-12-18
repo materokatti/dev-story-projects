@@ -156,6 +156,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "savez",
             ils: "savent",
         },
+    },
+    {
+        infinitive: "voir",
+        translation: "to see",
+        conjugations: {
+            je: "vois",
+            tu: "vois",
+            il: "voit",
+            nous: "voyons",
+            vous: "voyez",
+            ils: "voient",
+        },
     }
 ];
 
