@@ -168,6 +168,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "voyez",
             ils: "voient",
         },
+    },
+    {
+        infinitive: "mettre",
+        translation: "to put",
+        conjugations: {
+            je: "mets",
+            tu: "mets",
+            il: "met",
+            nous: "mettons",
+            vous: "mettez",
+            ils: "mettent",
+        },
     }
 ];
 
