@@ -10,135 +10,58 @@ interface FrenchWord {
 
 // Data structure definition
 const FRENCH_WORDS: FrenchWord[] = [
-  // Essential Expressions
-  {english: "What is this?", french: "Qu'est-ce que c'est?"},
   {
-    english: "How do you say '~' in French?",
-    french: "Comment dit-on '~' en français?",
+    "english": "rice",
+    "french": "le riz"
   },
-  {english: "Please repeat", french: "Répétez, s'il vous plaît?"},
   {
-    english: "Please speak more slowly",
-    french: "Parlez plus lentement, s'il vous plaît",
+    "english": "meat",
+    "french": "la viande"
   },
-  {english: "I understand", french: "D'accord"},
-  {english: "Just a moment", french: "Un moment"},
-  {english: "Me too", french: "moi aussi"},
-  {english: "I don't understand well", french: "Je ne comprends pas"},
-  {english: "What does ~ mean?", french: "Que signifie ~"},
-
-  // Self Introduction
-  {english: "Hello", french: "Bonjour"},
-  {english: "My name is Doyun", french: "Je m'appelle Doyun"},
-  {english: "I am 30 years old", french: "Je suis âgé de trente ans"},
-  {english: "I work as a developer", french: "Je travaille comme développeur"},
   {
-    english: "I've been learning French for 1 month",
-    french: "J'étudie le français depuis un mois",
+    "english": "coke",
+    "french": "le coca"
   },
-  {english: "Nice to meet you", french: "Enchanté de vous rencontrer"},
-  {english: "See you next time", french: "À bientôt"},
-  {english: "Have a nice day", french: "Bonne journée"},
-  {english: "How are you?", french: "Comment allez-vous?"},
-
-  // Days of the Week
-  {english: "Monday", french: "le lundi"},
-  {english: "Tuesday", french: "le mardi"},
-  {english: "Wednesday", french: "le mercredi"},
-  {english: "Thursday", french: "le jeudi"},
-  {english: "Friday", french: "le vendredi"},
-  {english: "Saturday", french: "le samedi"},
-  {english: "Sunday", french: "le dimanche"},
-
-  // Seasons
-  {english: "Spring", french: "le printemps"},
-  {english: "Summer", french: "le été"},
-  {english: "Autumn", french: "le automne"},
-  {english: "Winter", french: "le hiver"},
-
-  // Months
-  {english: "January", french: "le janvier"},
-  {english: "February", french: "le février"},
-  {english: "March", french: "le mars"},
-  {english: "April", french: "l'avril"},
-  {english: "May", french: "le mai"},
-  {english: "June", french: "le juin"},
-  {english: "July", french: "le juillet"},
-  {english: "August", french: "l'août"},
-  {english: "September", french: "le septembre"},
-  {english: "October", french: "l'octobre"},
-  {english: "November", french: "le novembre"},
-  {english: "December", french: "le décembre"},
-
-  // Numbers 0-10
-  {english: "Zero", french: "Zéro"},
-  {english: "One", french: "un"},
-  {english: "Two", french: "deux"},
-  {english: "Three", french: "trois"},
-  {english: "Four", french: "quatre"},
-  {english: "Five", french: "cinq"},
-  {english: "Six", french: "six"},
-  {english: "Seven", french: "sept"},
-  {english: "Eight", french: "huit"},
-  {english: "Nine", french: "Neuf"},
-  {english: "Ten", french: "dix"},
-
-  // Numbers 11-20
-  {english: "Eleven", french: "onze"},
-  {english: "Twelve", french: "douze"},
-  {english: "Thirteen", french: "treize"},
-  {english: "Fourteen", french: "quatorze"},
-  {english: "Fifteen", french: "quinze"},
-  {english: "Sixteen", french: "seize"},
-  {english: "Seventeen", french: "dix-sept"},
-  {english: "Eighteen", french: "dix-huit"},
-  {english: "Nineteen", french: "dix-neuf"},
-  {english: "Twenty", french: "vingt"},
-
-  // Numbers 21-30
-  {english: "Twenty one", french: "vingt-et-un"},
-  {english: "Twenty two", french: "vingt-deux"},
-  {english: "Twenty three", french: "vingt-trois"},
-  {english: "Twenty four", french: "vingt-quatre"},
-  {english: "Twenty five", french: "vingt-cinq"},
-  {english: "Twenty six", french: "vingt-six"},
-  {english: "Twenty seven", french: "vingt-sept"},
-  {english: "Twenty eight", french: "vingt-huit"},
-  {english: "Twenty nine", french: "vingt-neuf"},
-  {english: "Thirty", french: "trente"},
-
-  // Numbers by tens up to 100
-  {english: "Forty", french: "quarante"},
-  {english: "Fifty", french: "cinquante"},
-  {english: "Sixty", french: "soixante"},
-  {english: "Seventy", french: "soixante-dix"},
-  {english: "Eighty", french: "quatre-vingts"},
-  {english: "Ninety", french: "quatre-vingt-dix"},
-  {english: "One hundred", french: "cent"},
-
-  // Ordinal Numbers
-  {english: "First", french: "premier/première"},
-  {english: "Second", french: "deuxième"},
-  {english: "Third", french: "troisième"},
-  {english: "Fourth", french: "quatrième"},
-  {english: "Fifth", french: "cinquième"},
-  {english: "Sixth", french: "sixième"},
-  {english: "Seventh", french: "septième"},
-  {english: "Eighth", french: "huitième"},
-  {english: "Ninth", french: "neuvième"},
-  {english: "Tenth", french: "dixième"},
-
-  // Common Words
-  {english: "Often", french: "Souvent"},
-  {english: "Every morning", french: "Tous les matins"},
-  {english: "First time", french: "Première fois"},
-  {english: "To come", french: "Venir à"},
-  {english: "To run", french: "Courir"},
-  {english: "Beautiful", french: "Beau"},
-  {english: "Pleasant", french: "Agréable"},
-  {english: "A park", french: "Un parc"},
-  {english: "Have a good evening", french: "Bonne soirée"},
-  {english: "See you tomorrow", french: "À demain"},
+  {
+    "english": "cheese",
+    "french": "le fromage"
+  },
+  {
+    "english": "bean",
+    "french": "le haricot"
+  },
+  {
+    "english": "grape",
+    "french": "le raisin"
+  },
+  {
+    "english": "onion",
+    "french": "l'oignon"
+  },
+  {
+    "english": "money",
+    "french": "l'argent"
+  },
+  {
+    "english": "vegetable",
+    "french": "le légume"
+  },
+  {
+    "english": "fruit",
+    "french": "le fruit"
+  },
+  {
+    "english": "oil",
+    "french": "l'huile"
+  },
+  {
+    "english": "key",
+    "french": "la clé"
+  },
+  {
+    "english": "Korean",
+    "french": "coréen"
+  }
 ];
 
 const FrenchVocabQuiz: React.FC = () => {
