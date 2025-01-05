@@ -61,6 +61,26 @@ const FRENCH_WORDS: FrenchWord[] = [
   {
     "english": "Korean",
     "french": "coréen"
+  },
+  {
+    "english": "to buy",
+    "french": "acheter"
+  },
+  {
+    "english": "take a walk",
+    "french": "se promener"
+  },
+  {
+    "english": "to prefer",
+    "french": "préférer"
+  },
+  {
+    "english": "to try",
+    "french": "essayer"
+  },
+  {
+    "english": "to sweep",
+    "french": "balayer"
   }
 ];
 
