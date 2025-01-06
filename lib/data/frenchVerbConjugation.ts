@@ -180,6 +180,30 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "mettez",
             ils: "mettent",
         },
+    },
+    {
+        infinitive: "ne pas être",
+        translation: "to not be",
+        conjugations: {
+            je: "ne suis pas",
+            tu: "n'es pas",
+            il: "n'est pas",
+            nous: "ne sommes pas",
+            vous: "n'êtes pas",
+            ils: "ne sont pas",
+        },
+    },
+    {
+        infinitive: "acheter",
+        translation: "to buy",
+        conjugations: {
+            je: "achète",
+            tu: "achètes",
+            il: "achète",
+            nous: "achetons",
+            vous: "achetez",
+            ils: "achètent",
+        },
     }
 ];
 
