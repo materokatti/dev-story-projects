@@ -1,7 +1,7 @@
 "use client";
-import React, {useState, useEffect} from "react";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Input} from "@/components/ui/Input";
+import React, { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 interface FrenchWord {
   english: string;
@@ -11,76 +11,112 @@ interface FrenchWord {
 // Data structure definition
 const FRENCH_WORDS: FrenchWord[] = [
   {
-    "english": "rice",
-    "french": "le riz"
+    "french": "le riz",
+    "english": "rice"
   },
   {
+    "french": "la viande",
     "english": "meat",
-    "french": "la viande"
   },
   {
+    "french": "le coca",
     "english": "coke",
-    "french": "le coca"
   },
   {
+    "french": "le fromage",
     "english": "cheese",
-    "french": "le fromage"
   },
   {
+    "french": "le haricot",
     "english": "bean",
-    "french": "le haricot"
   },
   {
+    "french": "le raisin",
     "english": "grape",
-    "french": "le raisin"
   },
   {
+    "french": "l'oignon",
     "english": "onion",
-    "french": "l'oignon"
   },
   {
+    "french": "l'argent",
     "english": "money",
-    "french": "l'argent"
   },
   {
+    "french": "le légume",
     "english": "vegetable",
-    "french": "le légume"
   },
   {
+    "french": "le fruit",
     "english": "fruit",
-    "french": "le fruit"
   },
   {
+    "french": "l'huile",
     "english": "oil",
-    "french": "l'huile"
   },
   {
+    "french": "la clé",
     "english": "key",
-    "french": "la clé"
   },
   {
+    "french": "coréen",
     "english": "Korean",
-    "french": "coréen"
   },
   {
+    "french": "acheter",
     "english": "to buy",
-    "french": "acheter"
   },
   {
+    "french": "se promener",
     "english": "take a walk",
-    "french": "se promener"
   },
   {
+    "french": "préférer",
     "english": "to prefer",
-    "french": "préférer"
   },
   {
+    "french": "essayer",
     "english": "to try",
-    "french": "essayer"
   },
   {
+    "french": "balayer",
     "english": "to sweep",
-    "french": "balayer"
+  },
+  {
+    "french": "les animaux",
+    "english": "animals",
+  },
+  {
+    "french": "alors",
+    "english": "then",
+  },
+  {
+    "french": "choisir",
+    "english": "to choose",
+  },
+  {
+    "french": "finir",
+    "english": "to finish",
+  },
+  {
+    "french": "réussir",
+    "english": "to succeed",
+  },
+  {
+    "french": "la robe",
+    "english": "dress",
+  },
+  {
+    "french": "presque",
+    "english": "almost",
+  },
+  {
+    "french": "sortir",
+    "english": "to go out"
+  },
+  {
+    "french": "soir",
+    "english": "evening",
   }
 ];
 
@@ -241,11 +277,10 @@ const FrenchVocabQuiz: React.FC = () => {
                   disabled={showResult}
                   className={`mt-6 md:mt-8 lg:mt-10 w-full py-3 rounded-lg font-bold 
                                     transition-colors duration-200 hover:scale-105 active:scale-95
-                                    ${
-                                      showResult
-                                        ? "bg-gray-400 text-gray-200 cursor-not-allowed hover:scale-100 active:scale-100"
-                                        : "bg-blue-600 text-white hover:bg-blue-700"
-                                    }`}
+                                    ${showResult
+                      ? "bg-gray-400 text-gray-200 cursor-not-allowed hover:scale-100 active:scale-100"
+                      : "bg-blue-600 text-white hover:bg-blue-700"
+                    }`}
                 >
                   Check Answer
                 </button>
