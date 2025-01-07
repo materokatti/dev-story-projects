@@ -204,6 +204,30 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "achetez",
             ils: "achètent",
         },
+    },
+    {
+        infinitive: "finir",
+        translation: "to finish",
+        conjugations: {
+            je: "finis",
+            tu: "finis",
+            il: "finit",
+            nous: "finissons",
+            vous: "finissez",
+            ils: "finissent",
+        },
+    },
+    {
+        infinitive: "commencer",
+        translation: "to start",
+        conjugations: {
+            je: "commence",
+            tu: "commences",
+            il: "commence",
+            nous: "commençons",
+            vous: "commencez",
+            ils: "commencent",
+        },
     }
 ];
 
