@@ -117,7 +117,92 @@ const FRENCH_WORDS: FrenchWord[] = [
   {
     "french": "soir",
     "english": "evening",
+  },
+  {
+    "french": "grandir",
+    "english": "to grow",
+  },
+  {
+    "french": "vieillir",
+    "english": "to grow old",
+  },
+  {
+    "french": "vêtement",
+    "english": "clothing",
+  },
+  {
+    "french": "mincir",
+    "english": "to lose weight",
+  },
+  {
+    "french": "grossir",
+    "english": "to gain weight",
+  },
+  {
+    "french": "de plus en plus",
+    "english": "more and more",
+  },
+  {
+    "french": "de moins en moins",
+    "english": "less and less",
+  },
+  {
+    "french": "peur",
+    "english": "fear",
+  },
+  {
+    "french": "faire les courses",
+    "english": "to go shopping",
+  },
+  {
+    "french": "faire le ménage",
+    "english": "to do the housework",
+  },
+  {
+    "french": "faire la vaisselle",
+    "english": "to do the dishes",
+  },
+  {
+    "french": "faire la lessive",
+    "english": "to do the laundry",
+  },
+  {
+    "french": "faire du sport",
+    "english": "to do sports",
+  },
+  {
+    "french": "faire la sieste",
+    "english": "to take a nap",
+  },
+  {
+    "french": "faire la cuisine",
+    "english": "to cook",
+  },
+  {
+    "french": "prendre le rendez-vous",
+    "english": "to make an appointment",
+  },
+  {
+    "french": "prendre le métro",
+    "english": "to take the subway",
+  },
+  {
+    "french": "prendre la main",
+    "english": "to hold hands",
+  },
+  {
+    "french": "prendre des médicaments",
+    "english": "to take medicine",
+  },
+  {
+    "french": "prendre le déjeuner",
+    "english": "to have lunch",
+  },
+  {
+    "french": "prendre soin",
+    "english": "to take care",
   }
+  
 ];
 
 const FrenchVocabQuiz: React.FC = () => {
