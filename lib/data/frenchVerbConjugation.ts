@@ -228,6 +228,42 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "commencez",
             ils: "commencent",
         },
+    },
+    {
+        infinitive: "s'appeler",
+        translation: "to be called",
+        conjugations: {
+            je: "m'appelle",
+            tu: "t'appelles",
+            il: "s'appelle",
+            nous: "nous appelons",
+            vous: "vous appelez",
+            ils: "s'appellent",
+        },
+    },
+    {
+        infinitive: "se lever",
+        translation: "to get up",
+        conjugations: {
+            je: "me lève",
+            tu: "te lèves",
+            il: "se lève",
+            nous: "nous levons",
+            vous: "vous levez",
+            ils: "se lèvent",
+        },
+    },
+    {
+        infinitive: "se coucher",
+        translation: "to go to bed",
+        conjugations: {
+            je: "me couche",
+            tu: "te couches",
+            il: "se couche",
+            nous: "nous couchons",
+            vous: "vous couchez",
+            ils: "se couchent",
+        },
     }
 ];
 

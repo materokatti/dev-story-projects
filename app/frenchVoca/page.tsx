@@ -201,8 +201,53 @@ const FRENCH_WORDS: FrenchWord[] = [
   {
     "french": "prendre soin",
     "english": "to take care",
+  },
+  {
+    "french": "tout de suite",
+    "english": "right away",
+  },
+  {
+    "french": "l'infirmière",
+    "english": "nurse",
+  },
+  {
+    "french": "se raser",
+    "english": "to shave",
+  },
+  {
+    "french": "se peigner les cheveux",
+    "english": "to comb hair",
+  },
+  {
+    "french": "se faire hospitaliser",
+    "english": "to be hospitalized",
+  },
+  {
+    "french": "se faire une piqûre",
+    "english": "to get an injection",
+  },
+  {
+    "french": "rêve",
+    "english": "dream",
+  },
+  {
+    "french": "parfois",
+    "english": "sometimes",
+  },
+  {
+    "french": "minuit",
+    "english": "midnight",
+  },
+  {
+    "french": "les gants",
+    "english": "gloves",
+  },
+  {
+    "french": "douche",
+    "english": "shower",
   }
-  
+
+
 ];
 
 const FrenchVocabQuiz: React.FC = () => {
