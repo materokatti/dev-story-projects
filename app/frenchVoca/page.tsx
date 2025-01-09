@@ -227,7 +227,7 @@ const FRENCH_WORDS: FrenchWord[] = [
     "english": "to get an injection",
   },
   {
-    "french": "rêve",
+    "french": "le rêve",
     "english": "dream",
   },
   {
@@ -245,9 +245,47 @@ const FRENCH_WORDS: FrenchWord[] = [
   {
     "french": "douche",
     "english": "shower",
+  },
+  {
+    "french": "le cas",
+    "english": "case",
+  },
+  {
+    "french": "la poupée",
+    "english": "doll",
+  },
+  {
+    "french": "le manteau",
+    "english": "coat",
+  },
+  {
+    "french": "le jouet",
+    "english": "toy",
+  },
+  {
+    "french": "jeune",
+    "english": "young",
+  },
+  {
+    "french": "l'ordinateur",
+    "english": "computer",
+  },
+  {
+    "french": "on",
+    "english": "one",
+  },
+  {
+    "french": "se coucher",
+    "english": "to go to bed",
+  },
+  {
+    "french": "se réveiller",
+    "english": "to wake up",
+  },
+  {
+    "french": "où tout à l'heure",
+    "english": "where a while ago / where just now",
   }
-
-
 ];
 
 const FrenchVocabQuiz: React.FC = () => {

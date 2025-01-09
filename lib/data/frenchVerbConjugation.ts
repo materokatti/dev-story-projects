@@ -264,6 +264,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "vous couchez",
             ils: "se couchent",
         },
+    },
+    {
+        infinitive: "venir de manger",
+        translation: "to have just eaten",
+        conjugations: {
+            je: "viens de manger",
+            tu: "viens de manger",
+            il: "vient de manger",
+            nous: "venons de manger",
+            vous: "venez de manger",
+            ils: "viennent de manger",
+        },
     }
 ];
 
