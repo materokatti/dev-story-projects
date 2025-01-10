@@ -243,7 +243,7 @@ const FRENCH_WORDS: FrenchWord[] = [
     "english": "gloves",
   },
   {
-    "french": "douche",
+    "french": "la douche",
     "english": "shower",
   },
   {
