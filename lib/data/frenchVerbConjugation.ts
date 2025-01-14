@@ -276,6 +276,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "venez de manger",
             ils: "viennent de manger",
         },
+    },
+    {
+        infinitive: "finir (futur simple)",
+        translation: "to finish (future tense)",
+        conjugations: {
+            je: "finirai",
+            tu: "finiras",
+            il: "finira",
+            nous: "finirons",
+            vous: "finirez",
+            ils: "finiront",
+        },
     }
 ];
 

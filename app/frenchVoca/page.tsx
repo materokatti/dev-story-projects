@@ -235,7 +235,7 @@ const FRENCH_WORDS: FrenchWord[] = [
     "english": "sometimes",
   },
   {
-    "french": "minuit",
+    "french": "le minuit",
     "english": "midnight",
   },
   {
@@ -283,8 +283,24 @@ const FRENCH_WORDS: FrenchWord[] = [
     "english": "to wake up",
   },
   {
-    "french": "où tout à l'heure",
-    "english": "where a while ago / where just now",
+    "french": "la fenêtre",
+    "english": "window",
+  },
+  {
+    "french": "mignon",
+    "english": "cute",
+  },
+  {
+    "french": "le frère",
+    "english": "brother",
+  },
+  {
+    "french": "la sœur",
+    "english": "sister",
+  },
+  {
+    "french": "le rouge",
+    "english": "red",
   }
 ];
 
