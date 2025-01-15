@@ -32,3 +32,8 @@ export interface FrenchVerb {
   translation: string;
   conjugations: Conjugations;
 }
+
+export interface FrenchWord {
+  english: string;
+  french: string;
+}
