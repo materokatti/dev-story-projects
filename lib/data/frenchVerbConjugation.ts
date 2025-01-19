@@ -288,6 +288,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "finirez",
             ils: "finiront",
         },
+    },
+    {
+        infinitive: "avoir (imparfait)",
+        translation: "to have (imperfect tense)",
+        conjugations: {
+            je: "avais",
+            tu: "avais",
+            il: "avait",
+            nous: "avions",
+            vous: "aviez",
+            ils: "avaient",
+        },
     }
 ];
 

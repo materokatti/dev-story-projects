@@ -320,5 +320,41 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "las lunettes",
         "english": "glasses",
+    },
+    {
+        "french": "regarder",
+        "english": "to watch",
+    },
+    {
+        "french": "la bague",
+        "english": "ring",
+    },
+    {
+        "french": "le plat",
+        "english": "dish",
+    },
+    {
+        "french": "la couleur",
+        "english": "color",
+    },
+    {
+        "french": "chanteur",
+        "english": "singer",
+    },
+    {
+        "french": "le verre",
+        "english": "glass",
+    },
+    {
+        "french": "peu",
+        "english": "few",
+    },
+    {
+        "french": "las coordonnées",
+        "english": "contact information",
+    },
+    {
+        "french": "la assiette",
+        "english": "plate",
     }
 ];
