@@ -331,7 +331,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "le plat",
-        "english": "dish",
+        "english": "plate",
     },
     {
         "french": "la couleur",
