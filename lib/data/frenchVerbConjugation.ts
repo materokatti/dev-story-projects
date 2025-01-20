@@ -300,6 +300,18 @@ export const FRENCH_VERBS: FrenchVerb[] = [
             vous: "aviez",
             ils: "avaient",
         },
+    },
+    {
+        infinitive: "être (imparfait)",
+        translation: "to be (imperfect tense)",
+        conjugations: {
+            je: "étais",
+            tu: "étais",
+            il: "était",
+            nous: "étions",
+            vous: "étiez",
+            ils: "étaient",
+        },
     }
 ];
 

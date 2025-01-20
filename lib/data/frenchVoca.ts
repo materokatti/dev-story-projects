@@ -356,5 +356,61 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "la assiette",
         "english": "plate",
+    },
+    {
+        "french": "jeter un coup d'œil",
+        "english": "to take a look",
+    },
+    {
+        "french": "mettre au courant",
+        "english": "to inform",
+    },
+    {
+        "french": "détester",
+        "english": "to hate",
+    },
+    {
+        "french": "le tableau",
+        "english": "board, painting",
+    },
+    {
+        "french": "attendre",
+        "english": "to wait",
+    },
+    {
+        "french": "voisin",
+        "english": "neighbor",
+    },
+    {
+        "french": "donner",
+        "english": "to give",
+    },
+    {
+        "french": "toi ou moi",
+        "english": "you or me",
+    },
+    {
+        "french": "seul",
+        "english": "alone",
+    },
+    {
+        "french": "appartenir a",
+        "english": "to belong to",
+    },
+    {
+        "french": "être fier de",
+        "english": "to be proud of",
+    },
+    {
+        "french": "faire attention à",
+        "english": "to pay attention to",
+    },
+    {
+        "french": "s'occuper de",
+        "english": "to take care of",
+    },
+    {
+        "french": "écrire sur",
+        "english": "to write about",
     }
 ];
