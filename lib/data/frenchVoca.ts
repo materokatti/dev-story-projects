@@ -331,7 +331,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "le plat",
-        "english": "plate",
+        "english": "dish (p...)",
     },
     {
         "french": "la couleur",
@@ -355,7 +355,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "la assiette",
-        "english": "plate",
+        "english": "plate (a...)",
     },
     {
         "french": "jeter un coup d'œil",
@@ -394,23 +394,23 @@ export const FRENCH_WORDS: FrenchWord[] = [
         "english": "alone",
     },
     {
-        "french": "appartenir a",
-        "english": "to belong to",
+        "french": "appartenir à",
+        "english": "to belong to (disjunctive pronoun)",
     },
     {
         "french": "être fier de",
-        "english": "to be proud of",
+        "english": "to be proud of (disjunctive pronoun)",
     },
     {
         "french": "faire attention à",
-        "english": "to pay attention to",
+        "english": "to pay attention to (disjunctive pronoun)",
     },
     {
         "french": "s'occuper de",
-        "english": "to take care of",
+        "english": "to take care of (disjunctive pronoun)",
     },
     {
         "french": "écrire sur",
-        "english": "to write about",
+        "english": "to write about (disjunctive pronoun)",
     }
 ];
