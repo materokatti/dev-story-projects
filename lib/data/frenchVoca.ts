@@ -412,5 +412,25 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "écrire sur",
         "english": "to write about (disjunctive pronoun)",
+    },
+    {
+        "french": "voleur",
+        "english": "thief",
+    },
+    {
+        "french": "trouver",
+        "english": "to find",
+    },
+    {
+        "french": "gauche",
+        "english": "left, wrong",
+    },
+    {
+        "french": "droit",
+        "english": "right, straight",
+    },
+    {
+        "french": "le devoir",
+        "english": "duty, homework",
     }
 ];
