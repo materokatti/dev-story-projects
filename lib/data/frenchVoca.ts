@@ -432,5 +432,37 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "le devoir",
         "english": "duty, homework",
+    },
+    {
+        "french": "déposer un brevet",
+        "english": "to patent",
+    },
+    {
+        "french": "faire une recherche",
+        "english": "to research, to do a search",
+    },
+    {
+        "french": "remplir",
+        "english": "to fill",
+    },
+    {
+        "french": "prendre en charge quelqu'un",
+        "english": "to take care of someone",
+    },
+    {
+        "french": "combien de temps",
+        "english": "how long",
+    },
+    {
+        "french": "cela fait longtemps que",
+        "english": "it's(cela) been a long time since",
+    },
+    {
+        "french": "Ça fait longtemps que",
+        "english": "It's(ça) been a long time since",
+    },
+    {
+        "french": "Il y a longtemps que",
+        "english": "It's(Il y a) been a long time since",
     }
 ];
