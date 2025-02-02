@@ -464,5 +464,25 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "Il y a longtemps que",
         "english": "It's(Il y a) been a long time since",
+    },
+    {
+        "french": "la prochaine fois",
+        "english": "next time",
+    },
+    {
+        "french": "le bonheur",
+        "english": "happiness",
+    },
+    {
+        "french": "pleurer",
+        "english": "to cry",
+    },
+    {
+        "french": "la bête",
+        "english": "beast, fool",
+    },
+    {
+        "french": "la habitude",
+        "english": "habit",
     }
 ];
