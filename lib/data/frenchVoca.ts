@@ -447,7 +447,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "prendre en charge quelqu'un",
-        "english": "to take care of someone",
+        "english": "(prendre ~)to take care of",
     },
     {
         "french": "combien de temps",
@@ -484,5 +484,45 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "la habitude",
         "english": "habit",
+    },
+    {
+        "french": "le bilan",
+        "english": "balance sheet",
+    },
+    {
+        "french": "investir en ~",
+        "english": "to invest in ~",
+    },
+    {
+        "french": "tenir le cap",
+        "english": "to hold the course",
+    },
+    {
+        "french": "tenir compte de ~",
+        "english": "to take into account ~",
+    },
+    {
+        "french": "plusieurs",
+        "english": "several",
+    },
+    {
+        "french": "rentrer",
+        "english": "to return",
+    },
+    {
+        "french": "le bureau",
+        "english": "office",
+    },
+    {
+        "french": "il a de la chance",
+        "english": "he is lucky",
+    },
+    {
+        "french": "quand même",
+        "english": "anyway",
+    },
+    {
+        "french": "derrière",
+        "english": "behind",
     }
 ];
