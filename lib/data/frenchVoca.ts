@@ -552,5 +552,29 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "ensuite",
         "english": "then / next / afterwards",
+    },
+    {
+        "french": "frapper",
+        "english": "to hit",
+    },
+    {
+        "french": "jouer",
+        "english": "to play",
+    },
+    {
+        "french": "faire de bêtises",
+        "english": "to make mistakes / to do silly things",
+    },
+    {
+        "french": "hier",
+        "english": "yesterday",
+    },
+    {
+        "french": "tôt",
+        "english": "early",
+    },
+    {
+        "french": "le portefeuille",
+        "english": "wallet",
     }
 ];
