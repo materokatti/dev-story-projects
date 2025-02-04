@@ -524,5 +524,33 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "derrière",
         "english": "behind",
+    },
+    {
+        "french": "connaître",
+        "english": "to know",
+    },
+    {
+        "french": "laisser",
+        "english": "to leave",
+    },
+    {
+        "french": "le colis",
+        "english": "package",
+    },
+    {
+        "french": "devant",
+        "english": "in front of",
+    },
+    {
+        "french": "le bord",
+        "english": "edge",
+    },
+    {
+        "french": "nager",
+        "english": "to swim",
+    },
+    {
+        "french": "ensuite",
+        "english": "then / next / afterwards",
     }
 ];
