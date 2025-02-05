@@ -576,5 +576,17 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "le portefeuille",
         "english": "wallet",
+    },
+    {
+        "french": "partir de bonne heure",
+        "english": "to leave early",
+    },
+    {
+        "french": "respecter le règlement",
+        "english": "to respect the rules",
+    },
+    {
+        "french": "suivre les consignes",
+        "english": "to follow the instructions",
     }
 ];
