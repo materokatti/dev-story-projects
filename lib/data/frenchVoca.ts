@@ -588,5 +588,49 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "suivre les consignes",
         "english": "to follow the instructions",
+    },
+    {
+        "french": "décoller",
+        "english": "to take off",
+    },
+    {
+        "french": "vers",
+        "english": "towards / around",
+    },
+    {
+        "french": "donner des cours",
+        "english": "to give lessons / to teach",
+    },
+    {
+        "french": "le lycée",
+        "english": "high school",
+    },
+    {
+        "french": "après",
+        "english": "after",
+    },
+    {
+        "french": "plus souvent",
+        "english": "more often",
+    },
+    {
+        "french": "pendant",
+        "english": "during",
+    },
+    {
+        "french": "se balader",
+        "english": "to stroll / to walk around",
+    },
+    {
+        "french": "la plage",
+        "english": "beach",
+    },
+    {
+        "french": "le dernier jour",
+        "english": "the last day",
+    },
+    {
+        "french": "la plongée",
+        "english": "diving",
     }
 ];
