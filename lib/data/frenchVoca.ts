@@ -632,5 +632,33 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "la plongée",
         "english": "diving",
+    },
+    {
+        "french": "ce pourrait être ~",
+        "english": "it could be ~",
+    },
+    {
+        "french": "au gré de ~",
+        "english": "according to ~",
+    },
+    {
+        "french": "voire",
+        "english": "even",
+    },
+    {
+        "french": "en quelques décennies",
+        "english": "in a few decades",
+    },
+    {
+        "french": "est passé de A à B",
+        "english": "went from A to B / changed from A to B",
+    },
+    {
+        "french": "ainsi",
+        "english": "thus",
+    },
+    {
+        "french": "se confondre avec ~",
+        "english": "to be confused with ~",
     }
 ];
