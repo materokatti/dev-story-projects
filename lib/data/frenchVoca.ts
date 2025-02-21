@@ -531,7 +531,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "laisser",
-        "english": "to leave",
+        "english": "to leave (l~)",
     },
     {
         "french": "le colis",
@@ -660,5 +660,41 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "se confondre avec ~",
         "english": "to be confused with ~",
+    },
+    {
+        "french": "bientôt",
+        "english": "soon",
+    },
+    {
+        "french": "quitter",
+        "english": "to leave (q~)",
+    },
+    {
+        "french": "en plus",
+        "english": "moreover",
+    },
+    {
+        "french": "là-bas",
+        "english": "there",
+    },
+    {
+        "french": "avant de",   
+        "english": "before / prior to",
+    },
+    {
+        "french": "la vérité",
+        "english": "truth",
+    },
+    {
+        "french": "les frais d'inscription",
+        "english": "registration fees",
+    },
+    {
+        "french": "devenir",
+        "english": "to become",
+    },
+    {
+        "french": "à emporter",
+        "english": "to go",
     }
 ];
