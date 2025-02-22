@@ -696,5 +696,53 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "à emporter",
         "english": "to go",
+    },
+    {
+        "french": "une grosse cylindrée",
+        "english": "a big engine / a big car",
+    },
+    {
+        "french": "Veuillez patienter",
+        "english": "Please wait",  
+    },
+    {
+        "french": "Ayez du sang-froid",
+        "english": "Keep calm",
+    },
+    {
+        "french": "Ayons du courage",
+        "english": "Let's be brave",
+    },
+    {
+        "french": "le marché de l'occasion",
+        "english": "second-hand market",
+    },
+    {
+        "french": "rater",
+        "english": "to miss / to fail",
+    },
+    {
+        "french": "manquer",
+        "english": "to miss / to lack",
+    },
+    {
+        "french": "avec le temps",
+        "english": "over time",
+    },
+    {
+        "french": "la voie",
+        "english": "way / path",
+    },
+    {
+        "french": "sauver",
+        "english": "to save",
+    },
+    {
+        "french": "surtout",
+        "english": "especially",
+    },
+    {
+        "french": "la chasse",
+        "english": "hunting",
     }
 ];
