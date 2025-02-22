@@ -318,7 +318,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
         "english": "fridge",
     },
     {
-        "french": "las lunettes",
+        "french": "les lunettes",
         "english": "glasses",
     },
     {
@@ -350,7 +350,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
         "english": "few",
     },
     {
-        "french": "las coordonnées",
+        "french": "les coordonnées",
         "english": "contact information",
     },
     {
