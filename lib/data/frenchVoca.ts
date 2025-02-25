@@ -744,5 +744,77 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "la chasse",
         "english": "hunting",
+    },
+    {
+        "french": "Levez-vous",
+        "english": "Get up (2nd person plural)",
+    },
+    {
+        "french": "Arrosez les plantes",
+        "english": "Water the plants(2nd person plural)",
+    },
+    {
+        "french": "Allons au cinéma",
+        "english": "Let's go to the cinema", 
+    },
+    {
+        "french": "Vous pouvez parler lentement",
+        "english": "You can speak slowly(2nd person plural)",
+    },
+    {
+        "french": "habillez-vous",
+        "english": "get dressed(2nd person plural)",
+    },
+    {
+        "french": "être en forme",
+        "english": "to be in shape / to be healthy",
+    },
+    {
+        "french": "jusqu'à",
+        "english": "until",
+    },
+    {
+        "french": "souvenir",
+        "english": "to remember",
+    },
+    {
+        "french": "dés que",
+        "english": "as soon as",
+    },
+    {
+        "french": "méchant",
+        "english": "mean",
+    },
+    {
+        "french": "la fille et le fils",
+        "english": "the daughter and the son",
+    },
+    {
+        "french": "boire ",
+        "english": "to drink",
+    },
+    {
+        "french": "emmener",
+        "english": "to take / to bring",
+    },
+    {
+        "french": "Ne t'inquiète pas",
+        "english": "Don't worry",
+    },
+    {
+        "french": "grignoter",
+        "english": "to snack",
+    },
+    {
+        "french": "gentil",
+        "english": "nice / kind / gentle / sweet",
+    },
+    {
+        "french": "de temps en temps",
+        "english": "sometimes / from time to time",
+    },
+    {
+        "french": "le feu",
+        "english": "fire",
     }
 ];
