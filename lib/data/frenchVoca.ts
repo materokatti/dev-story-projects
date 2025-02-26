@@ -832,5 +832,37 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "tricher",
         "english": "to cheat",
+    },
+    {
+        "french": "supplier",
+        "english": "to beg",
+    },
+    {
+        "french": "redouter",
+        "english": "to dread / to fear(r~)",
+    },
+    {
+        "french": "demander",
+        "english": "to ask",
+    },
+    {
+        "french": "craindre",
+        "english": "to fear (c~)",
+    },
+    {
+        "french": "souhaiter",
+        "english": "to wish",
+    },
+    {
+        "french": "constater",
+        "english": "to notice / to observe",
+    },
+    {
+        "french": "remarquer",
+        "english": "to notice / to remark",
+    },
+    {
+        "french": "trouver que ~",
+        "english": "to think that ~",
     }
 ];
