@@ -816,5 +816,21 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "le feu",
         "english": "fire",
+    },
+    {
+        "french": "le chemin",
+        "english": "path / way (c~)",
+    },
+    {
+        "french": "heureux",
+        "english": "happy",
+    },
+    {
+        "french": "gagner",
+        "english": "to win",
+    },
+    {
+        "french": "tricher",
+        "english": "to cheat",
     }
 ];
