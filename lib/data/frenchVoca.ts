@@ -864,5 +864,73 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "trouver que ~",
         "english": "to think that ~",
+    },
+    {
+        "french": "autoriser",
+        "english": "to allow",
+    },
+    {
+        "french": "salarié",
+        "english": "employee",
+    },
+    {
+        "french": "rémunération",
+        "english": "salary", 
+    },
+    {
+        "french": "sien",
+        "english": "his / hers / its",
+    },
+    {
+        "french": "bien que ~",
+        "english": "although ~",
+    },
+    {
+        "french": "profiter de ~",
+        "english": "to take advantage of ~",
+    },
+    {
+        "french": "ravi",
+        "english": "delighted",
+    },
+    {
+        "french": "fâché",
+        "english": "angry",
+    },
+    {
+        "french": "déprimé",
+        "english": "depressed",
+    },
+    {
+        "french": "économiser",
+        "english": "to save money",
+    },
+    {
+        "french": "Il est dommage que ~",
+        "english": "It's a pity that ~",
+    },
+    {
+        "french": "malade",
+        "english": "sick",
+    },
+    {
+        "french": "revendiquer",
+        "english": "to claim",
+    },
+    {
+        "french": "auprès de ~",
+        "english": "with ~ / near ~ ",
+    },
+    {
+        "french": "élève",
+        "english": "student",
+    },
+    {
+        "french": "Il fait que ~",
+        "english": "It's necessary that ~",
+    },
+    {
+        "french": "assidu",
+        "english": "diligent",
     }
 ];
