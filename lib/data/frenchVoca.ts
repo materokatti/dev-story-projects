@@ -1072,5 +1072,73 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "la visite à domicile",
         "english": "home visit"
+    },
+    {
+        "french": "le cou",
+        "english": "neck"
+    },
+    {
+        "french": "le visage",
+        "english": "face"
+    },
+    {
+        "english": "once a week",
+        "french": "une fois par semaine"
+    },
+    {
+        "french": "suivant",
+        "english": "next / following"
+    },
+    {
+        "french": "la date de péremption",
+        "english": "expiration date(food)"
+    },
+    {
+        "french": "la date d'expiration",
+        "english": "expiration date(object)"
+    },
+    {
+        "french": "avoir une bonne hygiène de vie",
+        "english": "to have a good lifestyle"
+    },
+    {
+        "french": "nettoyer",
+        "english": "to clean"
+    },
+    {
+        "french": "être enrhumé",
+        "english": "to have a cold / to be congested"
+    },    
+    {
+        "french": "le mouchoir",
+        "english": "tissue"
+    },
+    {
+        "french": "le comprimé",
+        "english": "tablet / pill"
+    },
+    {
+        "french": "du sirop pour la toux",
+        "english": "cough syrup"
+    },    
+    {
+        "french": "je n'y vais pas",
+        "english": "I'm not going there"
+    },
+    {
+        "french": "je n'y suis jamais allé(e)",
+        "english": "I've never been there"
+    },    
+    {
+        "french": "il y en a beaucoup à Nantes",
+        "english": "there are many in Nantes"
+    },
+    {
+        "french": "je n'ai pas pu prendre de vacances",
+        "english": "I couldn't take a vacation"
+    },
+    {
+        "french": "le patient",
+        "english": "patient"
     }
 ];
