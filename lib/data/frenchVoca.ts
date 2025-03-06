@@ -1079,7 +1079,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "le visage",
-        "english": "face"
+        "english": "face(v...)"
     },
     {
         "english": "once a week",
@@ -1140,5 +1140,105 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "le patient",
         "english": "patient"
+    },
+    {
+        "french": "les bijoux",
+        "english": "jewelry"
+    },    
+    {
+        "french": "inscrire",
+        "english": "to register"
+    },
+    {
+        "french": "interdire",
+        "english": "to forbid"
+    },
+    {
+        "french": "tu as raison",
+        "english": "you are right"
+    },
+    {
+        "french": "tu as tort",
+        "english": "you are wrong"
+    },
+    {
+        "french": "C'est faux",
+        "english": "It's wrong"
+    },
+    {
+        "french": "Il ne faut pas écouter de la musique",
+        "english": "You must not listen to music"
+    },
+    {
+        "french": "les fesses",
+        "english": "buttocks"
+    },
+    {
+        "french": "l'épaule",
+        "english": "shoulder"
+    },
+    {
+        "french": "la hanche",
+        "english": "hip"
+    },
+    {
+        "french": "la poitrine",
+        "english": "chest"
+    },
+    {
+        "french": "la cuisse",
+        "english": "thigh"
+    },
+    {
+        "french": "la nuque",
+        "english": "nape of the neck"
+    },
+    {
+        "french": "le coude",
+        "english": "elbow"
+    },
+    {
+        "french": "l'ongle",
+        "english": "nail"
+    },
+    {
+        "french": "le poignet",
+        "english": "wrist"
+    },
+    {
+        "french": "le mollet",
+        "english": "calf"
+    },
+    {
+        "french": "les doigts",
+        "english": "fingers"
+    },
+    {
+        "french": "une tranche de pain",
+        "english": "a slice of bread"
+    },
+    {
+        "french": "tomber malade",
+        "english": "to get sick"
+    },
+    {
+        "french": "ça vaut le coup",
+        "english": "it's worth it"
+    },
+    {
+        "french": "je ne fais plus de sport",
+        "english": "I no longer do sports"
+    },
+    {
+        "french": "ça prend du temps",
+        "english": "it takes time"
+    },
+    {
+        "french": "leur manière de manger",
+        "english": "their way of eating"
+    },
+    {
+        "french": "donner son avis",
+        "english": "to give one's opinion"
     }
 ];
