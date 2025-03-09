@@ -1167,7 +1167,7 @@ export const FRENCH_WORDS: FrenchWord[] = [
     },
     {
         "french": "Il ne faut pas écouter de la musique",
-        "english": "You must not listen to music"
+        "english": "You(il) must not listen to music"
     },
     {
         "french": "les fesses",
@@ -1240,5 +1240,33 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "donner son avis",
         "english": "to give one's opinion"
+    },
+    {
+        "french": "je me suis cassé le pied",
+        "english": "I broke my foot"
+    },
+    {
+        "french": "jouer au foot",
+        "english": "to play soccer"
+    },
+    {
+        "french": "chez le kiné",
+        "english": "at the physiotherapist's"
+    },
+    {
+        "french": "le poids",
+        "english": "weight"
+    },
+    {
+        "french": "vous pouvez manger mieux",
+        "english": "you can eat better"
+    },
+    {
+        "french": "vous devez vous promener plus souvent",
+        "english": "you must walk more often"
+    },
+    {
+        "french": "assez",
+        "english": "enough"
     }
 ];
