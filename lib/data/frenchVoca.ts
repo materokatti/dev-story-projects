@@ -1268,5 +1268,58 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "assez",
         "english": "enough"
+    },
+    {
+        "french": "le long de la rivière",
+        "english": "along the river"
+    },
+    {
+        "french": "aucune idée",
+        "english": "no idea"
+    },
+    {
+        "french": "après-demain",
+        "english": "the day after tomorrow"
+    },
+    {
+        "french": "avant-hier",
+        "english": "the day before yesterday"
+    },
+    {
+        "french": "allumer",
+        "english": "to turn on"
+    },
+    {
+        "french": "je suis malade",
+        "english": "I am sick"
+    },
+    {
+        "french": "j'ai chaud et j'ai mal",
+        "english": "I am hot and in pain"
+    },
+    {
+        "french": "elle a pris froid",
+        "english": "she caught a cold"
+    },
+    {
+        "french": "tu as vendu ta voiture",
+        "english": "you sold your car"
+    },
+    {
+        "french": "L'après-midi",
+        "english": "the afternoon"
+    },
+    {
+        "french": "cours de chant",
+        "english": "singing lessons"
+    },
+    {
+        "french": "le parapluie",
+        "english": "umbrella"
+    },
+    {
+        "french": "se multiplier",
+        "english": "to multiply"
     }
+    
 ];
