@@ -1320,6 +1320,47 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "se multiplier",
         "english": "to multiply"
+    },
+    {
+        "french": "Où est-ce qu'il habite?",
+        "english": "Where does he live?"
+    },
+    {
+        "french": "je joue de la guitare",
+        "english": "I play the guitar"
+    },
+    {
+        "french": "Quand est-ce que tu vas en Italie?",
+        "english": "When are you going to Italy?"
+    },
+    {
+        "french": "dernièrement",
+        "english": "lately / recently"
+    },
+    {
+        "french": "un aspirateur",
+        "english": "a vacuum cleaner"
+    },
+    {
+        "french": "une fourchette",
+        "english": "a fork"
+    },
+    {
+        "french": "une cuillère",
+        "english": "a spoon"
+    },
+    {
+        "french": "une brosse à dents",
+        "english": "a toothbrush"
+    },
+    {
+        "french": "un sèche-cheveux",
+        "english": "a hairdryer"
+    },
+    {
+        "french": "un couteau",
+        "english": "a knife"
     }
+    
     
 ];
