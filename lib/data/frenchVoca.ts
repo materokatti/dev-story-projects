@@ -1368,6 +1368,38 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "retrouver des amis et boire un verre",
         "english": "to meet friends and have a drink"
-    }
+    },
+    {
+        "french": "j'ai besoin de gagner de l'argent",
+        "english": "I need to earn money"
+    },
+    {
+        "french": "le serveur et la serveuse",
+        "english": "the waiter and the waitress"
+    },
+    {
+        "french": "le chirurgien et la chirurgienne",
+        "english": "the surgeon (male) and the surgeon (female)"
+    },
+    {
+        "french": "l'ouvrier et l'ouvrière",
+        "english": "the factory worker (male) and the factory worker (female)"
+    },
+    {
+        "french": "le réalisateur et la réalisatrice",
+        "english": "the director (male) and the director (female)"
+    },
+    {
+        "french": "il pleut",
+        "english": "it rains"
+    },
+    {
+        "french": "le concierge descend au rez-de-chaussée",
+        "english": "the concierge goes down to the ground floor"
+    },
+    {
+        "french": "le fauteuil",
+        "english": "armchair"
+    }    
     
 ];
