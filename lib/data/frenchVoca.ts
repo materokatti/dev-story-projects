@@ -4,86 +4,6 @@ export const FRENCH_WORDS: FrenchWord[] = [
     
     
     {
-        "french": "le mollet",
-        "english": "calf"
-    },
-    {
-        "french": "les doigts",
-        "english": "fingers"
-    },
-    {
-        "french": "une tranche de pain",
-        "english": "a slice of bread"
-    },
-    {
-        "french": "tomber malade",
-        "english": "to get sick"
-    },
-    {
-        "french": "ça vaut le coup",
-        "english": "it's worth it"
-    },
-    {
-        "french": "je ne fais plus de sport",
-        "english": "I no longer do sports"
-    },
-    {
-        "french": "ça prend du temps",
-        "english": "it takes time"
-    },
-    {
-        "french": "leur manière de manger",
-        "english": "their way of eating"
-    },
-    {
-        "french": "donner son avis",
-        "english": "to give one's opinion"
-    },
-    {
-        "french": "je me suis cassé le pied",
-        "english": "I broke my foot"
-    },
-    {
-        "french": "jouer au foot",
-        "english": "to play soccer"
-    },
-    {
-        "french": "chez le kiné",
-        "english": "at the physiotherapist's"
-    },
-    {
-        "french": "le poids",
-        "english": "weight"
-    },
-    {
-        "french": "vous pouvez manger mieux",
-        "english": "you can eat better"
-    },
-    {
-        "french": "vous devez vous promener plus souvent",
-        "english": "you must walk more often"
-    },
-    {
-        "french": "assez",
-        "english": "enough"
-    },
-    {
-        "french": "le long de la rivière",
-        "english": "along the river"
-    },
-    {
-        "french": "aucune idée",
-        "english": "no idea"
-    },
-    {
-        "french": "après-demain",
-        "english": "the day after tomorrow"
-    },
-    {
-        "french": "avant-hier",
-        "english": "the day before yesterday"
-    },
-    {
         "french": "allumer",
         "english": "to turn on"
     },
@@ -198,6 +118,91 @@ export const FRENCH_WORDS: FrenchWord[] = [
     {
         "french": "le fauteuil",
         "english": "armchair"
-    }    
+    },
+    {
+        "french": "avoir un coup de foudre",
+        "english": "to fall in love at first sight"
+    },
+    {
+        "french": "être célibataire",
+        "english": "to be single"
+    },
+    {
+        "french": "faire connaissance",
+        "english": "to get to know each other"
+    },
+    {
+        "french": "naître",
+        "english": "to be born"
+    },
+    {
+        "french": "rencontrer quelqu'un",
+        "english": "to meet someone"
+    },
+    {
+        "french": "s'installer",
+        "english": "to settle down"
+    },
+    {
+        "french": "tomber amoureux(se)",
+        "english": "to fall in love"
+    },
+    {
+        "french": "le conjoint",
+        "english": "spouse / partner"
+    },
+    {
+        "french": "le meilleur ami",
+        "english": "best friend"
+    },
+    {
+        "french": "faire un séjour Erasmus",
+        "english": "to do an Erasmus stay"
+    },
+    {
+        "french": "devenir écrivain(e)",
+        "english": "to become a writer"
+    },
+    {
+        "french": "le humoriste",
+        "english": "comedian"
+    },
+    {
+        "french": "faire un stage",
+        "english": "to do an internship"
+    },
+    {
+        "french": "le dessinateur",
+        "english": "designer"
+    },
+    {
+        "french": "Parmi ~",
+        "english": "Among ~"
+    },
+    {
+        "french": "le fleuve",
+        "english": "river"
+    },
+    {
+        "french": "fraîche",
+        "english": "fresh"
+    },
+    {
+        "french": "tenir debout sur une planche et pagayer",
+        "english": "to stand on a board and paddle"
+    },
+    {
+        "french": "le parcours",
+        "english": "route"
+    },
+    {
+        "french": "Ils ne veulent rien faire",
+        "english": "They don't want to do anything"
+    },
+    {
+        "french": "Ils ne voient personne",
+        "english": "They don't see anyone"
+    }
+
     
 ];
