@@ -1,8 +1,6 @@
 import { FrenchWord } from '@/types/index';
 
 export const FRENCH_WORDS: FrenchWord[] = [
-    
-    
     {
         "french": "allumer",
         "english": "to turn on"
@@ -164,16 +162,16 @@ export const FRENCH_WORDS: FrenchWord[] = [
         "english": "to become a writer"
     },
     {
-        "french": "le humoriste",
+        "french": "l'humoriste",
         "english": "comedian"
-    },
+    },    
     {
         "french": "faire un stage",
         "english": "to do an internship"
     },
     {
-        "french": "le dessinateur",
-        "english": "designer"
+        "french": "le dessinateur / la dessinatrice",
+        "english": "designer / illustrator"
     },
     {
         "french": "Parmi ~",
@@ -184,13 +182,13 @@ export const FRENCH_WORDS: FrenchWord[] = [
         "english": "river"
     },
     {
-        "french": "fraîche",
+        "french": "frais / fraîche",
         "english": "fresh"
-    },
+    },    
     {
-        "french": "tenir debout sur une planche et pagayer",
+        "french": "se tenir debout sur une planche et pagayer",
         "english": "to stand on a board and paddle"
-    },
+    },    
     {
         "french": "le parcours",
         "english": "route"
