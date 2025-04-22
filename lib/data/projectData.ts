@@ -39,5 +39,10 @@ export const projectsData = [
         href: "frenchVoca",
         title: "French Vocabulary Quiz",
         description: "A quiz to test your knowledge of French Vocabulary"
+    },
+    {
+        href: "linearRegression",
+        title: "Linear Regression",
+        description: "Visualize the linear regression of a dataset"
     }
 ];
